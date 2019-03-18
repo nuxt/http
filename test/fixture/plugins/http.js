@@ -1,8 +1,8 @@
 export default function ({ $http, redirect }) {
   $http.setHeader('xsrfHeaderName', 'X-CSRF-TOKEN')
 
-  $http.onRequest((config) => {
+  $http.onRequest((options) => {
     // eslint-disable-next-line no-console
-    console.log('SPY: ' + config.url)
+    console.log('Request:', JSON.stringify(options))
   })
 }
