@@ -8,15 +8,15 @@ module.exports = {
     resourceHints: false
   },
   modules: [
-    { handler: require('../../') }
+    require('../..')
   ],
-  serverMiddleware: ['~/api.js'],
+  serverMiddleware: [
+    '~/api.js'
+  ],
   http: {
     prefix: '/test_api',
     proxy: true,
-    credentials: true,
-    debug: true,
-    retry: true
+    retry: 1
   },
   plugins: ['~/plugins/http']
 }

@@ -6,24 +6,24 @@
 </template>
 
 <script>
-  // This will be intentically shared across requests
-  let reqCtr = 1
+// This will be intentically shared across requests
+let reqCtr = 1
 
-  export default {
-    async fetch({app, route}) {
-      let doLogin = route.query.login !== undefined
-      if (doLogin) {
-        app.$http.setHeader('sessionId', reqCtr++)
-      }
+export default {
+  computed: {
+    axiosSessionId() {
+      return this.$http._defaults.headers.sessionId
     },
-    computed: {
-      axiosSessionId() {
-        return this.$http.defaults.headers.common.sessionId
-      },
 
-      axiosEncoding() {
-        return this.$http.defaults.headers.common['Accept-Encoding']
-      }
+    axiosEncoding() {
+      return this.$http._defaults.headers['Accept-Encoding']
+    }
+  },
+  fetch({ app, route }) {
+    const doLogin = route.query.login !== undefined
+    if (doLogin) {
+      app.$http.setHeader('sessionId', reqCtr++)
     }
   }
+}
 </script>
