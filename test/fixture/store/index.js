@@ -1,12 +1,12 @@
 export default {
   actions: {
     nuxtServerInit({ commit }, ctx) {
-      if (!ctx.$axios) {
-        throw new Error('$axios is not defined!')
+      if (!ctx.$http) {
+        throw new Error('$http is not defined!')
       }
 
-      if (!ctx.app.$axios) {
-        throw new Error('$axios is not defined!')
+      if (!ctx.app.$http) {
+        throw new Error('$http is not defined!')
       }
     }
   }

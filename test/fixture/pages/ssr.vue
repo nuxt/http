@@ -13,16 +13,16 @@
     async fetch({app, route}) {
       let doLogin = route.query.login !== undefined
       if (doLogin) {
-        app.$axios.setHeader('sessionId', reqCtr++)
+        app.$http.setHeader('sessionId', reqCtr++)
       }
     },
     computed: {
       axiosSessionId() {
-        return this.$axios.defaults.headers.common.sessionId
+        return this.$http.defaults.headers.common.sessionId
       },
 
       axiosEncoding() {
-        return this.$axios.defaults.headers.common['Accept-Encoding']
+        return this.$http.defaults.headers.common['Accept-Encoding']
       }
     }
   }
