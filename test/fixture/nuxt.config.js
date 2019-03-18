@@ -11,12 +11,12 @@ module.exports = {
     { handler: require('../../') }
   ],
   serverMiddleware: ['~/api.js'],
-  axios: {
+  http: {
     prefix: '/test_api',
     proxy: true,
     credentials: true,
     debug: true,
     retry: true
   },
-  plugins: ['~/plugins/axios']
+  plugins: ['~/plugins/http']
 }
