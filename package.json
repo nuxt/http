@@ -1,14 +1,14 @@
 {
-  "name": "@nuxtjs/axios",
-  "version": "5.4.1",
-  "description": "Secure and easy axios integration with Nuxt.js",
+  "name": "@nuxt/http",
+  "version": "0.0.0",
+  "description": "HTTP Module for Nuxt.js",
   "license": "MIT",
   "contributors": [
     "Pooya Parsa <pooya@pi0.ir>"
   ],
   "main": "lib/module.js",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/nuxt-community/axios-module",
+  "repository": "https://github.com/nuxt/http-module",
   "publishConfig": {
     "access": "public"
   },

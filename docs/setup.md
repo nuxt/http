@@ -4,13 +4,13 @@
 Install with yarn:
 
 ```bash
-yarn add @nuxtjs/axios
+yarn add @nuxt/http
 ```
 
 Install with npm:
 
 ```bash
-npm install @nuxtjs/axios
+npm install @nuxt/http
 ```
 
 **nuxt.config.js**
@@ -18,7 +18,7 @@ npm install @nuxtjs/axios
 ```js
 module.exports = {
   modules: [
-    '@nuxtjs/axios',
+    '@nuxt/http',
   ],
 
   axios: {

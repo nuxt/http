@@ -57,7 +57,7 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
 ```js
 {
   modules: [
-    '@nuxtjs/axios'
+    '@nuxt/http'
   ],
 
   axios: {

@@ -1,4 +1,4 @@
-# 📦 Axios Module
+# 📦 HTTP Module
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js
+TODO
 
 ## ✅ Features
 
@@ -19,15 +19,13 @@
 
 ✓ Proxy request headers in SSR (Useful for auth)
 
-✓ Fetch Style requests
-
-✓ Integrated with Nuxt.js Progressbar while making requests
+✓ Integrated with Nuxt.js Progressbar while making requests (TODO)
 
 ✓ Integrated with [Proxy Module](https://github.com/nuxt-community/proxy-module)
 
-✓ Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
+✓ Auto retry requests
 
-📖 [**Read Documentation**](https://axios.nuxtjs.org)
+📖 [**Read Documentation**](https://http.nuxtjs.org) (TODO)
 
 ## Development
 
@@ -39,18 +37,18 @@
 
 [MIT License](./LICENSE)
 
-Copyright (c) Nuxt Community
+Copyright (c) Nuxt.js Team
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square
-[npm-version-href]: https://npmjs.com/package/@nuxtjs/axios
-[npm-downloads-src]: https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/axios
-[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square
-[circle-ci-href]: https://circleci.com/gh/nuxt-community/axios-module
-[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square
-[codecov-href]: https://codecov.io/gh/nuxt-community/axios-module
-[david-dm-src]: https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square
-[david-dm-href]: https://david-dm.org/nuxt-community/axios-module
+[npm-version-src]: https://img.shields.io/npm/dt/@nuxt/http.svg?style=flat-square
+[npm-version-href]: https://npmjs.com/package/@nuxt/http
+[npm-downloads-src]: https://img.shields.io/npm/v/@nuxt/http/latest.svg?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/@nuxt/http
+[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt/http-module.svg?style=flat-square
+[circle-ci-href]: https://circleci.com/gh/nuxt/http-module
+[codecov-src]: https://img.shields.io/codecov/c/github/nuxt/http-module.svg?style=flat-square
+[codecov-href]: https://codecov.io/gh/nuxt/http-module
+[david-dm-src]: https://david-dm.org/nuxt/http-module/status.svg?style=flat-square
+[david-dm-href]: https://david-dm.org/nuxt/http-module
 [standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
 [standard-js-href]: https://standardjs.com

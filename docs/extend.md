@@ -7,7 +7,7 @@ If you need to customize axios by registering interceptors and changing global c
 ```js
 {
   modules: [
-    '@nuxtjs/axios',
+    '@nuxt/http',
   ],
 
   plugins: [
