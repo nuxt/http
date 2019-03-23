@@ -34,18 +34,6 @@ Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseU
 
 If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
 
-### `progress`
-
-* Default: `true`
-
-Integrate with Nuxt.js progress bar to show a loading bar while making requests. (Only on browser, when loading bar is available.)
-
-You can also disable progress bar per request using `progress` config.
-
-```js
-this.$http.$get('URL', { progress: false })
-```
-
 ### `proxy`
 
 * Default: `false`

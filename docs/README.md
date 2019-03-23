@@ -11,8 +11,6 @@
 
 ✓ Fetch Style requests
 
-✓ Integrated with Nuxt.js Progressbar while making requests
-
 ✓ Integrated with [Proxy Module](https://github.com/nuxt-community/proxy-module)
 
 ✓ Auto retry requests with [http-retry](https://github.com/softonic/http-retry)
