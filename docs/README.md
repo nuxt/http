@@ -6,7 +6,6 @@
 
 ✓ Exposes `setToken` function to `$http` so we can easily and globally set authentication tokens
 
-✓ Automatically enables `withCredentials` when requesting to base URL
 
 ✓ Proxy request headers in SSR (Useful for auth)
 

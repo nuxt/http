@@ -95,13 +95,6 @@ http: {
 }
 ```
 
-### `credentials`
-
-* Default: `false`
-
-Adds an interceptor to automatically set `withCredentials` config of http when requesting to `baseURL`
-which allows passing authentication headers to backend.
-
 ### `debug`
 
 * Default: `false`
