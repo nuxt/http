@@ -28,7 +28,7 @@ HTTP plugin also supports fetch style requests with `$` prefixed methods:
 
 ```js
 // Normal usage with http
-let data = (await $http.get('...')).data
+let data = (await $http.get('...')).json()
 
 // Fetch Style
 let data = await $http.$get('...')
