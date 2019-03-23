@@ -83,11 +83,6 @@ http: {
 }
 ```
 
-### `debug`
-
-* Default: `false`
-
-Adds interceptors to log request and responses.
 
 ### `proxyHeaders`
 
