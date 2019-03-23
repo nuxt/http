@@ -17,8 +17,6 @@ interface NuxtHTTPInstance {
   onRequest(callback: (config: any) => void): void
   onResponse<T = any>(callback: (response: any) => void): void
   onError(callback: (error: any) => void): void
-    onRequestError(callback: (error: any) => void): void
-      onResponseError(callback: (error: any) => void): void
 }
 
 declare module '@nuxt/vue-app' {

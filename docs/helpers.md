@@ -7,8 +7,6 @@ HTTP plugin provides helpers to register http interceptors easier and faster.
 - `onRequest(config)`
 - `onResponse(response)`
 - `onError(err)`
-- `onRequestError(err)`
-- `onResponseError(err)`
 
 These functions don't have to return anything by default.
 
