@@ -6,7 +6,7 @@
 
 ```js
 async asyncData({ $http }) {
-  const ip = await $http.$get('http://icanhazip.com')
+  const ip = await $http.get('http://icanhazip.com').text()
   return { ip }
 }
 ```
@@ -16,7 +16,7 @@ async asyncData({ $http }) {
 ```js
 methods: {
   async fetchSomething() {
-    const ip = await this.$http.$get('http://icanhazip.com')
+    const ip = await this.$http.get('http://icanhazip.com').text()
     this.ip = ip
   }
 }
@@ -29,7 +29,7 @@ methods: {
 {
   actions: {
     async getIP ({ commit }) {
-      const ip = await this.$http.$get('http://icanhazip.com')
+      const ip = await this.$http.get('http://icanhazip.com').text()
       commit('SET_IP', ip)
     }
   }

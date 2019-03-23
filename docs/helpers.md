@@ -22,9 +22,9 @@ export default function ({ $http, redirect }) {
 }
 ```
 
-### Fetch Style requests
+### JSON Requests
 
-HTTP plugin also supports fetch style requests with `$` prefixed methods:
+HTTP plugin supports easier JSON requests with `$` prefixed methods:
 
 ```js
 // Normal usage with http
@@ -34,7 +34,7 @@ let data = (await $http.get('...')).json()
 let data = await $http.$get('...')
 ```
 
-### `setHeader(name, value, scopes='common')`
+### `setHeader(name, value)`
 
 HTTP instance has a helper to easily set any header.
 
@@ -42,10 +42,6 @@ Parameters:
 
 * **name**: Name of the header
 * **value**: Value of the header
-* **scopes**: Send only on specific type of requests. Defaults
-  * Type: _Array_ or _String_
-  * Defaults to `common` meaning all types of requests
-  * Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
@@ -59,11 +55,11 @@ this.$http.setHeader('Content-Type', 'application/x-www-form-urlencoded', [
   'post'
 ])
 
-// Removes default Content-Type header from `post` scope
-this.$http.setHeader('Content-Type', false, ['post'])
+// Removes default Content-Type header
+this.$http.setHeader('Content-Type', false)
 ```
 
-### `setToken(token, type, scopes='common')`
+### `setToken(token, type)`
 
 HTTP instance has an additional helper to easily set global authentication header.
 
@@ -71,10 +67,6 @@ Parameters:
 
 * **token**: Authorization token
 * **type**: Authorization token prefix(Usually `Bearer`).
-* **scopes**: Send only on specific type of requests. Defaults
-  * Type: _Array_ or _String_
-  * Defaults to `common` meaning all types of requests
-  * Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
@@ -89,6 +81,6 @@ this.$http.setToken('123', 'Bearer')
 // Adds header: `Authorization: Bearer 123` to only post and delete requests
 this.$http.setToken('123', 'Bearer', ['post', 'delete'])
 
-// Removes default Authorization header from `common` scope (all requests)
+// Removes default Authorization header
 this.$http.setToken(false)
 ```
