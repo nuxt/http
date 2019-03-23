@@ -1,7 +1,7 @@
-import { NuxtAxiosInstance } from '.'
+import { NuxtHTTPInstance } from '.'
 
 declare module 'vuex' {
   interface Store<S> {
-    $axios: NuxtAxiosInstance,
+    $http: NuxtHTTPInstance,
   }
 }

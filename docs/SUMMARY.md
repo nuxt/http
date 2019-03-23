@@ -2,7 +2,7 @@
 
 * [Setup](setup.md)
 * [Usage](usage.md)
-* [Extending axios](extend.md)
+* [Extending http](extend.md)
 * [Helpers](helpers.md)
 * [Options](options.md)
 * [Migration Guide](migration.md)

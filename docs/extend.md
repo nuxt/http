@@ -1,6 +1,6 @@
-## Extending Axios
+## Extending HTTP
 
-If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
+If you need to customize http by registering interceptors and changing global config, you have to create a nuxt plugin.
 
 **nuxt.config.js**
 
@@ -11,20 +11,20 @@ If you need to customize axios by registering interceptors and changing global c
   ],
 
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/http'
   ]
 }
 ```
 
-**plugins/axios.js**
+**plugins/http.js**
 
 ```js
-export default function ({ $axios, redirect }) {
-  $axios.onRequest(config => {
+export default function ({ $http, redirect }) {
+  $http.onRequest(config => {
     console.log('Making request to ' + config.url)
   })
 
-  $axios.onError(error => {
+  $http.onError(error => {
     const code = parseInt(error.response && error.response.status)
     if (code === 400) {
       redirect('/400')

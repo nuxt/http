@@ -21,7 +21,7 @@ module.exports = {
     '@nuxt/http',
   ],
 
-  axios: {
+  http: {
     // proxyHeaders: false
   }
 }

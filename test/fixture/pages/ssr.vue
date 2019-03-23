@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>session-{{ axiosSessionId }}</div>
-    <div>encoding-${{ axiosEncoding }}$</div>
+    <div>session-{{ httpSessionId }}</div>
+    <div>encoding-${{ httpEncoding }}$</div>
   </div>
 </template>
 
@@ -11,11 +11,11 @@ let reqCtr = 1
 
 export default {
   computed: {
-    axiosSessionId() {
+    httpSessionId() {
       return this.$http._defaults.headers.sessionId
     },
 
-    axiosEncoding() {
+    httpEncoding() {
       return this.$http._defaults.headers['Accept-Encoding']
     }
   },

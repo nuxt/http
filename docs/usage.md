@@ -5,8 +5,8 @@
 **`asyncData`**
 
 ```js
-async asyncData({ $axios }) {
-  const ip = await $axios.$get('http://icanhazip.com')
+async asyncData({ $http }) {
+  const ip = await $http.$get('http://icanhazip.com')
   return { ip }
 }
 ```
@@ -16,7 +16,7 @@ async asyncData({ $axios }) {
 ```js
 methods: {
   async fetchSomething() {
-    const ip = await this.$axios.$get('http://icanhazip.com')
+    const ip = await this.$http.$get('http://icanhazip.com')
     this.ip = ip
   }
 }
@@ -29,7 +29,7 @@ methods: {
 {
   actions: {
     async getIP ({ commit }) {
-      const ip = await this.$axios.$get('http://icanhazip.com')
+      const ip = await this.$http.$get('http://icanhazip.com')
       commit('SET_IP', ip)
     }
   }

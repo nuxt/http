@@ -1,6 +1,6 @@
 ## Options
 
-You can pass options using module options or `axios` section in `nuxt.config.js`
+You can pass options using module options or `http` section in `nuxt.config.js`
 
 ### `prefix`, `host` and `port`
 
@@ -43,14 +43,14 @@ Integrate with Nuxt.js progress bar to show a loading bar while making requests.
 You can also disable progress bar per request using `progress` config.
 
 ```js
-this.$axios.$get('URL', { progress: false })
+this.$http.$get('URL', { progress: false })
 ```
 
 ### `proxy`
 
 * Default: `false`
 
-You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-community/proxy-module) and is much recommended to prevent CORS and deployment problems.
+You can easily integrate HTTP with [Proxy Module](https://github.com/nuxt-community/proxy-module) and is much recommended to prevent CORS and deployment problems.
 
 **nuxt.config.js**
 
@@ -60,7 +60,7 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
     '@nuxt/http'
   ],
 
-  axios: {
+  http: {
     proxy: true // Can be also an object with default options
   },
 
@@ -85,12 +85,12 @@ proxy: {
 
 * Default: `false`
 
- Automatically intercept failed requests and retries them whenever posible using [axios-retry](https://github.com/softonic/axios-retry).
+ Automatically intercept failed requests and retries them whenever posible using [http-retry](https://github.com/softonic/http-retry).
 
 By default, number of retries will be **3 times**, if `retry` value is set to `true`. You can change it by passing an object like this:
 
 ```js
-axios: {
+http: {
   retry: { retries: 3 }
 }
 ```
@@ -99,7 +99,7 @@ axios: {
 
 * Default: `false`
 
-Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseURL`
+Adds an interceptor to automatically set `withCredentials` config of http when requesting to `baseURL`
 which allows passing authentication headers to backend.
 
 ### `debug`
@@ -112,7 +112,7 @@ Adds interceptors to log request and responses.
 
 * Default: `true`
 
-In SSR context, sets client request header as axios default request headers.
+In SSR context, sets client request header as http default request headers.
 This is useful for making requests which need cookie based auth on server side.
 Also helps making consistent requests in both SSR and Client Side code.
 

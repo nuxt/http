@@ -7,25 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-TODO
-
-## ✅ Features
-
-✓ Automatically set base URL for client & server side
-
-✓ Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
-
-✓ Automatically enables `withCredentials` when requesting to base URL
-
-✓ Proxy request headers in SSR (Useful for auth)
-
-✓ Integrated with Nuxt.js Progressbar while making requests (TODO)
-
-✓ Integrated with [Proxy Module](https://github.com/nuxt-community/proxy-module)
-
-✓ Auto retry requests
-
-📖 [**Read Documentation**](https://http.nuxtjs.org) (TODO)
+📖 [**Read Documentation**](https://http.nuxtjs.org)
 
 ## Development
 
