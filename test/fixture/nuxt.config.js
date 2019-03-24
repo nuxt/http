@@ -18,5 +18,8 @@ module.exports = {
     proxy: true,
     retry: 1
   },
+  build: {
+    terser: false
+  },
   plugins: ['~/plugins/http']
 }
