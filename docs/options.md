@@ -81,13 +81,13 @@ proxy: {
 
 * Default: `false`
 
- Automatically intercept failed requests and retries them whenever posible using [http-retry](https://github.com/softonic/http-retry).
+Automatically intercept failed requests and retry before failing.
 
-By default, number of retries will be **3 times**, if `retry` value is set to `true`. You can change it by passing an object like this:
+By default, number of retries will be **2 times**, if `retry` value is set to `true`. You can change it by passing an object like this:
 
 ```js
 http: {
-  retry: { retries: 3 }
+  retry: 1
 }
 ```
 
