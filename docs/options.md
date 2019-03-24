@@ -1,8 +1,16 @@
-## Options
+# Options
 
 You can pass options using module options or `http` section in `nuxt.config.js`
 
-### `prefix`, `host` and `port`
+```js
+{
+  http: {
+    // HTTP options here
+  }
+}
+```
+
+## `prefix`, `host`, `port`
 
 This options are used for default values of `baseURL` and `browserBaseURL`.
 
@@ -10,7 +18,7 @@ Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `
 
 Default value of `prefix` is `/`.
 
-### `baseURL`
+## `baseURL`
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
 
@@ -20,7 +28,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 **Note:** `baseURL` and `proxy` doesn't work together, you need to use `prefix` instead.
 
-### `browserBaseURL`
+## `browserBaseURL`
 
 * Default: `baseURL` (or `prefix` when `options.proxy` is enabled)
 
@@ -28,13 +36,13 @@ Base URL which is used and prepended to make requests in client side.
 
 Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
-### `https`
+## `https`
 
 * Default: `false`
 
 If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
 
-### `proxy`
+## `proxy`
 
 * Default: `false`
 
@@ -69,7 +77,7 @@ proxy: {
 }
 ```
 
-### `retry`
+## `retry`
 
 * Default: `false`
 
@@ -83,8 +91,7 @@ http: {
 }
 ```
 
-
-### `proxyHeaders`
+## `proxyHeaders`
 
 * Default: `true`
 
@@ -94,7 +101,7 @@ Also helps making consistent requests in both SSR and Client Side code.
 
 > **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
 
-### `proxyHeadersIgnore`
+## `proxyHeadersIgnore`
 
 * Default `['host', 'accept']`
 

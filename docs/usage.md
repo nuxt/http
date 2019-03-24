@@ -1,8 +1,8 @@
-## Usage
+# Usage
 
-### Component
+## Page Components
 
-**`asyncData`**
+For `asyncData` and `fetch` you can access instance from context:
 
 ```js
 async asyncData({ $http }) {
@@ -11,7 +11,9 @@ async asyncData({ $http }) {
 }
 ```
 
-**`methods`/`created`/`mounted`/etc**
+## Component methods
+
+Where you have access to `this`, you can use `this.$http`:
 
 ```js
 methods: {
@@ -22,7 +24,9 @@ methods: {
 }
 ```
 
-### Store actions (including `nuxtServerInit`)
+## Store
+
+For store action you can also use `this.$http`:
 
 ```js
 // In store

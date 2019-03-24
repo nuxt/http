@@ -1,14 +1,12 @@
 {
   "name": "@nuxt/http",
   "version": "0.0.0",
-  "description": "HTTP Module for Nuxt.js",
+  "description": "Universal HTTP Module for Nuxt.js",
   "license": "MIT",
-  "contributors": [
-    "Pooya Parsa <pooya@pi0.ir>"
-  ],
+  "author": "Pooya Parsa <pooya@pi0.ir>",
   "main": "lib/module.js",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/nuxt/http-module",
+  "repository": "nuxt/http",
   "publishConfig": {
     "access": "public"
   },

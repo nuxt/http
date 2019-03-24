@@ -1,28 +1,6 @@
-## Helpers
+# Helpers
 
-### Interceptors
-
-HTTP plugin provides helpers to register http interceptors easier and faster.
-
-- `onRequest(config)`
-- `onResponse(response)`
-- `onError(err)`
-
-These functions don't have to return anything by default.
-
-Example: (`plugins/http.js`)
-
-```js
-export default function ({ $http, redirect }) {
-  $http.onError(error => {
-    if(error.response.status === 500) {
-      redirect('/sorry')
-    }
-  })
-}
-```
-
-### JSON Requests
+## JSON Requests
 
 HTTP plugin supports easier JSON requests with `$` prefixed methods:
 
@@ -34,7 +12,7 @@ let data = (await $http.get('...')).json()
 let data = await $http.$get('...')
 ```
 
-### `setHeader(name, value)`
+## `setHeader(name, value)`
 
 HTTP instance has a helper to easily set any header.
 
@@ -44,22 +22,22 @@ Parameters:
 * **value**: Value of the header
 
 ```js
-// Adds header: `Authorization: 123` to all requests
+// Add header `Authorization: 123` to all requests
 this.$http.setHeader('Authorization', '123')
 
-// Overrides `Authorization` header with new value
+// Override `Authorization` header with new value
 this.$http.setHeader('Authorization', '456')
 
-// Adds header: `Content-Type: application/x-www-form-urlencoded` to only post requests
-this.$http.setHeader('Content-Type', 'application/x-www-form-urlencoded', [
-  'post'
-])
+// Add header `Content-Type: application/x-www-form-urlencoded`
+this.$http.setHeader('Content-Type', 'application/x-www-form-urlencoded')
 
-// Removes default Content-Type header
+// Remove default Content-Type header
 this.$http.setHeader('Content-Type', false)
 ```
 
-### `setToken(token, type)`
+> NOTE: You do NOT need to call setHeader helper in interceptors. It is a global setter.
+
+## `setToken(token, type)`
 
 HTTP instance has an additional helper to easily set global authentication header.
 
