@@ -17,10 +17,9 @@ async function setupNuxt(config) {
 
   await builder.validatePages()
   await builder.generateRoutesAndFiles()
-
   nuxt.builder = builder
 
-  await nuxt.listen(3000)
+  await nuxt.ready()
 
   return nuxt
 }

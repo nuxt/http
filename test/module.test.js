@@ -1,4 +1,4 @@
-const ky = require('ky-universal')
+const fetch = require('node-fetch')
 const { setupNuxt } = require('./_utils')
 
 const url = path => `http://localhost:3000${path}`
@@ -8,8 +8,8 @@ describe('module', () => {
 
   test('setup', async () => {
     nuxt = await setupNuxt()
-
     await nuxt.builder.build()
+    await nuxt.listen(3000)
   })
 
   afterAll(async () => {
@@ -25,7 +25,7 @@ describe('module', () => {
   })
 
   test('asyncData', async () => {
-    const html = await ky.get(url('/asyncData')).text()
+    const html = await fetch(url('/asyncData')).then(r => r.text())
     expect(html).toContain('foo/bar')
   })
 
@@ -46,8 +46,7 @@ describe('module', () => {
   })
 
   test('ssr', async () => {
-    const makeReq = login => ky
-      .get(url('/ssr' + (login ? '?login' : '')))
+    const makeReq = login => fetch(url('/ssr' + (login ? '?login' : '')))
       .then(r => r.text())
       .then(h => /session-[0-9]+/.exec(h))
       .then(m => (m && m[0] ? m[0] : null))
@@ -65,8 +64,7 @@ describe('module', () => {
   })
 
   test('ssr no brotli', async () => {
-    const makeReq = login => ky
-      .get(url('/ssr' + (login ? '?login' : '')))
+    const makeReq = login => fetch(url('/ssr' + (login ? '?login' : '')))
       .then(r => r.text())
       .then(h => /encoding-\$(.*)\$/.exec(h))
       .then(m => (m && m[1] ? m[1] : null))
