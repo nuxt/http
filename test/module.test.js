@@ -6,8 +6,10 @@ const url = path => `http://localhost:3000${path}`
 describe('module', () => {
   let nuxt
 
-  beforeAll(async () => {
+  test('setup', async () => {
     nuxt = await setupNuxt()
+
+    await nuxt.builder.build()
   })
 
   afterAll(async () => {

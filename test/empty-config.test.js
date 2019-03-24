@@ -3,7 +3,7 @@ const { setupNuxt } = require('./_utils')
 describe('empty config', () => {
   let nuxt
 
-  beforeAll(async () => {
+  test('setup', async () => {
     nuxt = await setupNuxt({
       http: {}
     })

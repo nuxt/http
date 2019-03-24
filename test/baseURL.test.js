@@ -3,7 +3,7 @@ const { setupNuxt } = require('./_utils')
 describe('browserBaseURL', () => {
   let nuxt
 
-  beforeAll(async () => {
+  test('setup', async () => {
     nuxt = await setupNuxt({
       http: {
         browserBaseURL: '/test_api'

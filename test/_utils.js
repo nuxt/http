@@ -13,10 +13,12 @@ async function setupNuxt(config) {
   // Spy addTemplate
   nuxt.moduleContainer.addTemplate = jest.fn(nuxt.moduleContainer.addTemplate)
 
-  const build = new Builder(nuxt)
+  const builder = new Builder(nuxt)
 
-  await build.validatePages()
-  await build.generateRoutesAndFiles()
+  await builder.validatePages()
+  await builder.generateRoutesAndFiles()
+
+  nuxt.builder = builder
 
   await nuxt.listen(3000)
 
