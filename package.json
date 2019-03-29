@@ -42,7 +42,7 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest",
+    "nuxt-edge": "^2.5.2-25896971.3b85dd97",
     "standard-version": "latest"
   }
 }
