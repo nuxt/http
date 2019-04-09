@@ -16,14 +16,6 @@ describe('module', () => {
     await nuxt.close()
   })
 
-  test('baseURL', () => {
-    expect(nuxt.moduleContainer.addTemplate).toBeDefined()
-    const call = nuxt.moduleContainer.addTemplate.calls.find(args => args[0].src.includes('plugin.js'))
-    const options = call[0].options
-    expect(options.baseURL.toString()).toBe('http://localhost:3000/test_api')
-    expect(options.browserBaseURL.toString()).toBe('/test_api')
-  })
-
   test('asyncData', async () => {
     const html = await fetch(url('/asyncData')).then(r => r.text())
     expect(html).toContain('foo/bar')
