@@ -4,14 +4,16 @@
 
 Available HTTP methods:
 
-- `get`
-- `post`
-- `put`
-- `patch`
-- `head`
-- `delete`
+- `get(url, options?)`
+- `head(url, options?)`
+- `delete(url, options?)`
+- `post(url, body?, options?)`
+- `put(url, body?, options?)`
+- `patch(url, body?, options?)`
 
-For making a request use `$http.<method>(<url>, <options>)`. Returns a Promise that either rejects in case of network errors or resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object. You can use methods to convert response stream into usable data:
+Calling these methods, returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
+
+You can use methods to convert response stream into usable data:
 
 - `json`
 - `text`
@@ -19,7 +21,7 @@ For making a request use `$http.<method>(<url>, <options>)`. Returns a Promise t
 - `arrayBuffer`
 - `blob`
 
-**Example: Fetch a json file**
+**Example: Get a json file**
 
 ```js
 await $http.get('https://unpkg.com/nuxt/package.json').json()
@@ -31,7 +33,7 @@ Alternatively for json only you can use `$` prefixed shortcut:
 await $http.$get('https://unpkg.com/nuxt/package.json')
 ```
 
-See [ky](https://github.com/sindresorhus/ky) docs for all available options.
+See [ky](https://github.com/sindresorhus/ky#options) docs for all available options.
 
 ### Sending Body
 

@@ -4,114 +4,104 @@ import './vuex'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-type JSONObject = { [key: string]: JSONValue };
-interface JSONArray extends Array<JSONValue> { }
-type JSONValue = string | number | boolean | null | JSONObject | JSONArray;
-
-interface OptionsWithoutBody extends Omit<Options, 'body'> {
-  method?: 'get' | 'head'
-}
-
-interface OptionsWithBody extends Options {
-  method?: 'post' | 'put' | 'delete'
-}
+type RequestBody = string | number | boolean | null | object | BodyInit
 
 interface NuxtHTTPInstance {
 	/**
-	 * Fetches the `input` URL with the option `{method: 'get'}`.
+	 * Fetches the `url` with the option `{method: 'get'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  get(input: Request | URL | string, options?: Omit<Options, 'body'>): ResponsePromise;
+	get(url: Request | URL | string, options?: Omit<Options, 'body'>): ResponsePromise;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'post'}`.
+	 * Fetches the `url` with the option `{method: 'post'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  post(input: Request | URL | string, options?: Options): ResponsePromise;
+	post(url: Request | URL | string, body?: RequestBody, options?: Options): ResponsePromise;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'put'}`.
+	 * Fetches the `url` with the option `{method: 'put'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  put(input: Request | URL | string, options?: Options): ResponsePromise;
+	put(url: Request | URL | string, body?: RequestBody, options?: Options): ResponsePromise;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'patch'}`.
+	 * Fetches the `url` with the option `{method: 'patch'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  patch(input: Request | URL | string, options?: Options): ResponsePromise;
+	patch(url: Request | URL | string, body?: RequestBody, options?: Options): ResponsePromise;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'head'}`.
+	 * Fetches the `url` with the option `{method: 'head'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  head(input: Request | URL | string, options?: Omit<Options, 'body'>): ResponsePromise;
+	head(url: Request | URL | string, options?: Omit<Options, 'body'>): ResponsePromise;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'delete'}`.
+	 * Fetches the `url` with the option `{method: 'delete'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise with `Body` method added.
 	 */
-  delete(input: Request | URL | string, options?: Options): ResponsePromise;
+	delete(url: Request | URL | string, options?: Options): ResponsePromise;
 
   /**
- * Fetches the `input` URL with the option `{method: 'get'}`.
+ * Fetches the `url` with the option `{method: 'get'}`.
  *
- * @param input - `Request` object, `URL` object, or URL string.
+ * @param url - `Request` object, `URL` object, or URL string.
  * @returns Promise that resolves to JSON parsed value.
  */
-  $get<T= JSONValue>(input: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
+	$get<T = JSONValue>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'post'}`.
+	 * Fetches the `url` with the option `{method: 'post'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-  $post<T = JSONValue>(input: Request | URL | string, options?: Options): Promise<T>;
+	$post<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'put'}`.
+	 * Fetches the `url` with the option `{method: 'put'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-  $put<T = JSONValue>(input: Request | URL | string, options?: Options): Promise<T>;
+	$put<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'patch'}`.
+	 * Fetches the `url` with the option `{method: 'patch'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-  $patch<T = JSONValue>(input: Request | URL | string, options?: Options): Promise<T>;
+	$patch<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'head'}`.
+	 * Fetches the `url` with the option `{method: 'head'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-  $head<T = JSONValue>(input: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
+	$head<T = JSONValue>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
 
 	/**
-	 * Fetches the `input` URL with the option `{method: 'delete'}`.
+	 * Fetches the `url` with the option `{method: 'delete'}`.
 	 *
-	 * @param input - `Request` object, `URL` object, or URL string.
+	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-  $delete<T = JSONValue>(input: Request | URL | string, options?: Options): Promise<T>;
+	$delete<T = JSONValue>(url: Request | URL | string, options?: Options): Promise<T>;
 
 
   /**
