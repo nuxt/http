@@ -21,6 +21,8 @@ You can use methods to convert response stream into usable data:
 - `arrayBuffer`
 - `blob`
 
+See [ky](https://github.com/sindresorhus/ky#options) docs for all available options.
+
 **Example: Get a json file**
 
 ```js
@@ -33,26 +35,10 @@ Alternatively for json only you can use `$` prefixed shortcut:
 await $http.$get('https://unpkg.com/nuxt/package.json')
 ```
 
-See [ky](https://github.com/sindresorhus/ky#options) docs for all available options.
-
-### Sending Body
-
-For sending body alongside with request, you can use either `json` or `body` options.
-`json` is a shortcut that serializes object using `JSON.stringify` and also sets appreciate `content-type` header.
-
 **Example: Post with JSON body**
 
 ```js
-await $http.post('http://api.con', { json: { foo: 'bar' }})
-```
-
-**Example: Post with FormData body**
-
-```js
-const data = new FormData()
-data.append('name', 'foo')
-
-await $http.post('http://api.com/submit', { data })
+await $http.post('http://api.con', { foo: 'bar' })
 ```
 
 ## Using in `asyncData`
