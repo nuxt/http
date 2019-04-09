@@ -8,26 +8,20 @@ module.exports = {
     displayAllHeaders: true,
     sidebar: [
       {
-        title: 'Guide',
         collapsable: false,
         children: [
           '/',
           'setup',
           'usage',
           'options',
-          'helpers',
-          'hooks',
+          'advanced',
           'migration'
         ]
       }
     ],
     nav: [
       {
-        text: 'Guide',
-        link: '/'
-      },
-      {
-        text: 'Release notes',
+        text: 'Release Notes',
         link: 'https://github.com/nuxt/http/blob/dev/CHANGELOG.md'
       }
     ]
