@@ -6,11 +6,11 @@ const url = path => `http://localhost:3000${path}`
 describe('module', () => {
   let nuxt
 
-  test('setup', async () => {
+  beforeAll(async () => {
     nuxt = await setupNuxt()
     await nuxt.builder.build()
     await nuxt.listen(3000)
-  })
+  }, 60000)
 
   afterAll(async () => {
     await nuxt.close()
@@ -18,7 +18,7 @@ describe('module', () => {
 
   test('baseURL', () => {
     expect(nuxt.moduleContainer.addTemplate).toBeDefined()
-    const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
+    const call = nuxt.moduleContainer.addTemplate.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options
     expect(options.baseURL.toString()).toBe('http://localhost:3000/test_api')
     expect(options.browserBaseURL.toString()).toBe('/test_api')

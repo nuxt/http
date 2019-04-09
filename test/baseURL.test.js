@@ -1,21 +1,17 @@
-const { setupNuxt } = require('./_utils')
+const { setupMockNuxt } = require('./_utils')
 
 describe('browserBaseURL', () => {
   let nuxt
 
-  test('setup', async () => {
-    nuxt = await setupNuxt({
+  beforeAll(async () => {
+    nuxt = await setupMockNuxt({
       http: {
         browserBaseURL: '/test_api'
       }
     })
   })
 
-  afterAll(async () => {
-    await nuxt.close()
-  })
-
-  test('custom', () => {
+  test('browserBaseURL', () => {
     expect(nuxt.moduleContainer.addTemplate).toBeDefined()
     const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options

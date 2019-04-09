@@ -1,16 +1,12 @@
-const { setupNuxt } = require('./_utils')
+const { setupMockNuxt } = require('./_utils')
 
 describe('empty config', () => {
   let nuxt
 
-  test('setup', async () => {
-    nuxt = await setupNuxt({
+  beforeAll(async () => {
+    nuxt = await setupMockNuxt({
       http: {}
     })
-  })
-
-  afterAll(async () => {
-    await nuxt.close()
   })
 
   test('preset baseURL and browserBaseURL', () => {
