@@ -17,6 +17,7 @@ module.exports = {
           'options',
           'helpers',
           'hooks',
+          'migration'
         ]
       }
     ],
