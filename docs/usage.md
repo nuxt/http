@@ -1,35 +1,92 @@
-## Usage
+# Usage
 
-### Component
+## Making Requests
 
-**`asyncData`**
+Available HTTP methods:
+
+- `get`
+- `post`
+- `put`
+- `patch`
+- `head`
+- `delete`
+
+For making a request use `$http.<method>(<url>, <options>)`. Returns a Promise that either rejects in case of network errors or resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object. You can use methods to convert response stream into usable data:
+
+- `json`
+- `text`
+- `formData`
+- `arrayBuffer`
+- `blob`
+
+**Example: Fetch a json file**
 
 ```js
-async asyncData({ $axios }) {
-  const ip = await $axios.$get('http://icanhazip.com')
+await $http.get('https://unpkg.com/nuxt/package.json').json()
+```
+
+Alternatively for json only you can use `$` prefixed shortcut:
+
+```js
+await $http.$get('https://unpkg.com/nuxt/package.json')
+```
+
+See [ky](https://github.com/sindresorhus/ky) docs for all available options.
+
+### Sending Body
+
+For sending body alongside with request, you can use either `json` or `body` options.
+`json` is a shortcut that serializes object using `JSON.stringify` and also sets appreciate `content-type` header.
+
+**Example: Post with JSON body**
+
+```js
+await $http.post('http://api.con', { json: { foo: 'bar' }})
+```
+
+**Example: Post with FormData body**
+
+```js
+const data = new FormData()
+data.append('name', 'foo')
+
+await $http.post('http://api.com/submit', { data })
+```
+
+## Using in `asyncData`
+
+For `asyncData` and `fetch` you can access instance from context:
+
+```js
+async asyncData({ $http }) {
+  const ip = await $http.get('http://icanhazip.com').text()
   return { ip }
 }
 ```
 
-**`methods`/`created`/`mounted`/etc**
+## Using in Component Methods
+
+Where you have access to `this`, you can use `this.$http`:
 
 ```js
 methods: {
   async fetchSomething() {
-    const ip = await this.$axios.$get('http://icanhazip.com')
+    const ip = await this.$http.get('http://icanhazip.com').text()
     this.ip = ip
   }
 }
 ```
 
-### Store actions (including `nuxtServerInit`)
+## Using in Store
+
+For store action you can also use `this.$http`:
 
 ```js
 // In store
 {
   actions: {
     async getIP ({ commit }) {
-      const ip = await this.$axios.$get('http://icanhazip.com')
+      const ip = await this.$http.get('http://icanhazip.com').text()
       commit('SET_IP', ip)
     }
   }

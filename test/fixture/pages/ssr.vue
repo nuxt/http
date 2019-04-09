@@ -1,29 +1,29 @@
 <template>
   <div>
-    <div>session-{{ axiosSessionId }}</div>
-    <div>encoding-${{ axiosEncoding }}$</div>
+    <div>session-{{ httpSessionId }}</div>
+    <div>encoding-${{ httpEncoding }}$</div>
   </div>
 </template>
 
 <script>
-  // This will be intentically shared across requests
-  let reqCtr = 1
+// This will be intentically shared across requests
+let reqCtr = 1
 
-  export default {
-    async fetch({app, route}) {
-      let doLogin = route.query.login !== undefined
-      if (doLogin) {
-        app.$axios.setHeader('sessionId', reqCtr++)
-      }
+export default {
+  computed: {
+    httpSessionId() {
+      return this.$http._defaults.headers.sessionId
     },
-    computed: {
-      axiosSessionId() {
-        return this.$axios.defaults.headers.common.sessionId
-      },
 
-      axiosEncoding() {
-        return this.$axios.defaults.headers.common['Accept-Encoding']
-      }
+    httpEncoding() {
+      return this.$http._defaults.headers['Accept-Encoding']
+    }
+  },
+  fetch({ app, route }) {
+    const doLogin = route.query.login !== undefined
+    if (doLogin) {
+      app.$http.setHeader('sessionId', reqCtr++)
     }
   }
+}
 </script>

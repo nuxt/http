@@ -1,5 +1,4 @@
-
-## Setup
+# Setup
 
 Install with yarn:
 
@@ -21,7 +20,7 @@ module.exports = {
     '@nuxt/http',
   ],
 
-  axios: {
+  http: {
     // proxyHeaders: false
   }
 }

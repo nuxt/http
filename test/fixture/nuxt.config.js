@@ -8,15 +8,18 @@ module.exports = {
     resourceHints: false
   },
   modules: [
-    { handler: require('../../') }
+    require('../..')
   ],
-  serverMiddleware: ['~/api.js'],
-  axios: {
+  serverMiddleware: [
+    '~/api.js'
+  ],
+  http: {
     prefix: '/test_api',
     proxy: true,
-    credentials: true,
-    debug: true,
-    retry: true
+    retry: 1
   },
-  plugins: ['~/plugins/axios']
+  build: {
+    terser: false
+  },
+  plugins: ['~/plugins/http']
 }

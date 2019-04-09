@@ -1,14 +1,12 @@
 {
   "name": "@nuxt/http",
   "version": "0.0.0",
-  "description": "HTTP Module for Nuxt.js",
+  "description": "Universal HTTP Module for Nuxt.js",
   "license": "MIT",
-  "contributors": [
-    "Pooya Parsa <pooya@pi0.ir>"
-  ],
+  "author": "Pooya Parsa <pooya@pi0.ir>",
   "main": "lib/module.js",
   "types": "types/index.d.ts",
-  "repository": "https://github.com/nuxt/http-module",
+  "repository": "nuxt/http",
   "publishConfig": {
     "access": "public"
   },
@@ -24,15 +22,13 @@
   ],
   "dependencies": {
     "@nuxtjs/proxy": "^1.3.3",
-    "axios": "^0.18.0",
-    "axios-retry": "^3.1.2",
-    "consola": "^2.5.6"
+    "consola": "^2.5.6",
+    "ky": "^0.9.0",
+    "ky-universal": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
     "@nuxtjs/eslint-config": "latest",
     "babel-eslint": "latest",
     "babel-jest": "latest",
@@ -45,9 +41,8 @@
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
-    "husky": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest",
+    "nuxt-edge": "^2.5.2-25896971.3b85dd97",
     "standard-version": "latest"
   }
 }
