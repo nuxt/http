@@ -2,16 +2,9 @@
 
 ## Making Requests
 
-Available HTTP methods:
+See the [API reference](/api/#http-methods) for a list of available HTTP methods
 
-- `get(url, options?)`
-- `head(url, options?)`
-- `delete(url, options?)`
-- `post(url, body?, options?)`
-- `put(url, body?, options?)`
-- `patch(url, body?, options?)`
-
-Calling these methods, returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
+Calling a HTTP methods returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
 
 You can use methods to convert response stream into usable data:
 
@@ -54,7 +47,11 @@ async asyncData({ $http }) {
 
 ## Using in Component Methods
 
-Where you have access to `this`, you can use `this.$http`:
+:::warning Note
+`this` is not available in Nuxt's `asyncData` method, see [here](/usage.html#using-in-asyncdata) for how to use this module in `asyncData`
+:::
+
+When you have access to `this`, you can use `this.$http`:
 
 ```js
 methods: {
@@ -67,7 +64,7 @@ methods: {
 
 ## Using in Store
 
-For store action you can also use `this.$http`:
+For store actions you can also use `this.$http`:
 
 ```js
 // In store
