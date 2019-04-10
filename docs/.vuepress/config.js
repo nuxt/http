@@ -5,22 +5,29 @@ module.exports = {
     repo: 'nuxt/http',
     docsDir: 'docs',
     editLinks: true,
+    editLinkText: 'Edit this page on GitHub',
     displayAllHeaders: true,
     sidebar: [
       {
         collapsable: false,
         children: [
           '/',
-          'setup',
-          'usage',
-          'options',
-          'advanced',
-          'migration'
+          '/guide/',
+          '/guide/usage',
+          '/guide/advanced',
+          '/guide/migration'
         ]
       }
     ],
     nav: [
       {
+        text: 'Guide',
+        link: '/guide/'
+      },
+      {
+        text: 'API',
+        link: '/api/'
+      }, {
         text: 'Release Notes',
         link: 'https://github.com/nuxt/http/blob/dev/CHANGELOG.md'
       }

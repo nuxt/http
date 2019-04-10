@@ -2,14 +2,9 @@
 
 ## Hooks
 
-Sometimes we want to globally intercept HTTP request and responses.
-for example display a toast on error or log them or dynamically modify requests.
+Hooks can be used to globally intercept HTTP request and responses. E.g. if you wish to log errors, display a toast on error or need to dynamically modify requests.
 
-HTTP module provides helpers to register hooks for request lifecycle:
-
-- `onRequest(config)`
-- `onResponse(response)`
-- `onError(err)` (`err.response` may be available on response errors)
+See the [API reference](/api/#hooks) for the list of lifecycle hooks the HTTP module provides
 
 These functions don't have to return anything by default.
 
@@ -53,7 +48,9 @@ export default function ({ $http }) {
 
 Globally set a header to all subsequent requests.
 
-> NOTE: This method should not be called inside hooks as it is global
+:::warning
+This method should probably not be called inside hooks as it is global and will apply to all future requests
+:::
 
 Parameters:
 
@@ -77,6 +74,10 @@ this.$http.setHeader('Content-Type', false)
 ### `setToken(token, type)`
 
 Globally set `Authorization` header to all subsequent requests.
+
+:::tip Note
+This is a global method, you only have to call it once after which all future requests will include the token
+:::
 
 Parameters:
 
