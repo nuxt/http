@@ -30,3 +30,5 @@ module.exports = {
   }
 }
 ```
+
+See [http's options](/api/#options).
