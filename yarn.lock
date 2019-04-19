@@ -1614,10 +1614,10 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-abort-controller@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-2.0.3.tgz#b174827a732efadff81227ed4b8d1cc569baf20a"
-  integrity sha512-EPSq5wr2aFyAZ1PejJB32IX9Qd4Nwus+adnp7STYFM5/23nLPBazqZ1oor6ZqbH+4otaaGXTlC8RN5hq3C8w9Q==
+abort-controller@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
+  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
   dependencies:
     event-target-shim "^5.0.0"
 
@@ -5844,18 +5844,18 @@ kleur@^3.0.2:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.2.tgz#83c7ec858a41098b613d5998a7b653962b504f68"
   integrity sha512-3h7B2WRT5LNXOtQiAaWonilegHcPSf9nLVXlSTci8lu1dZUuui61+EsPEZqSVxY7rXYmB2DVKMQILxaO5WL61Q==
 
-ky-universal@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ky-universal/-/ky-universal-0.1.0.tgz#17dd27020427d7fcb6fa5cfcac792a970fcb1cb0"
-  integrity sha512-QyKx159E/gAQFdSxApD+fdTb0ho5dPUgf+DtW5GMFg8chNZfyzaVnzlCO6cWFE67Lrgzz6/xrWae8cm5lZ5/AQ==
+ky-universal@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ky-universal/-/ky-universal-0.2.0.tgz#fbe4f029a06029c8e88be9c4aca256d6f5149b7b"
+  integrity sha512-OmA2/whehME/S07k7TWnS3odC6csdo0f5qHzljasjkBHTJMx0BSHKP62wmnIdZzGtDxo6XjB81GAvKhv7HhEig==
   dependencies:
-    abort-controller "^2.0.2"
+    abort-controller "^3.0.0"
     node-fetch "^2.3.0"
 
-ky@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/ky/-/ky-0.9.1.tgz#0b41c1d14f328226e4cea426a24db7f0fa181c65"
-  integrity sha512-E3R8ziFIbeh8j7BEicyPiCxO7LsJdeXj1WbX86SpJaEmg8HA1zqdylRrXsHxDSV+e1dk0edSPdEI8Z8fnk6+Fw==
+ky@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.10.0.tgz#b736665a484962f02d8e2498ab27cfb316cfb7d7"
+  integrity sha512-2OiL0TJiex7tGTUvYOrijLbXKV9rb9IJcLvDh+m5+v87ZhBThIlXwEjaC8/H0e8zMW+hq4HCznVBIdbNMsSQKg==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
