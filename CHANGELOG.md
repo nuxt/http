@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2](https://github.com/nuxt/http/compare/v0.1.1...v0.1.2) (2019-04-28)
+
+
+### Bug Fixes
+
+* **types:** add missing `JSONValue` import ([#28](https://github.com/nuxt/http/issues/28)) ([60e3370](https://github.com/nuxt/http/commit/60e3370))
+
+
+
 ## [0.1.1](https://github.com/nuxt/http/compare/v0.1.0...v0.1.1) (2019-04-18)
 
 
