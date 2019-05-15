@@ -2480,10 +2480,10 @@ consola@^2.0.0-1, consola@^2.3.0, consola@^2.5.6, consola@^2.5.8, consola@^2.6.0
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.6.0.tgz#ddf4e2a4361f67c120aa8bb41a0bd3cdbb58636e"
   integrity sha512-jge0Ip1NVoOafxZq1zxG1sLYVBtKV45BF39VV6YKSWb45nyLOHY51YP0+cBQ2DyOTKhCjtF0XrRJkjTvX4wzgQ==
 
-consola@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.6.1.tgz#d2f2bee385b5dba11907e4e0d17fc563d5fb9fa6"
-  integrity sha512-vt35owQG6OxYDJVaViQ4aFgOK+b98hIvs+R5CWkKgpO8rTPyaYwlMadZ7oZcjnWz1/+u4czDnrcogFr5AtrRug==
+consola@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.6.2.tgz#4c1238814bb80688b19f0db97123508889577752"
+  integrity sha512-GNJhwvF4bJ8eiAlyB8r4WNM8kBqkl+y4DvMehMbyywoJiv37N0M6/xrKqrrZw/5maZA+UagQV8UZ+XBeuGMzUg==
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -5662,10 +5662,10 @@ ky-universal@^0.2.0:
     abort-controller "^3.0.0"
     node-fetch "^2.3.0"
 
-ky@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/ky/-/ky-0.10.0.tgz#b736665a484962f02d8e2498ab27cfb316cfb7d7"
-  integrity sha512-2OiL0TJiex7tGTUvYOrijLbXKV9rb9IJcLvDh+m5+v87ZhBThIlXwEjaC8/H0e8zMW+hq4HCznVBIdbNMsSQKg==
+ky@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.11.0.tgz#032e01e10979f9f16682f6acff7daf43cafa5507"
+  integrity sha512-8EHh1PfPKrERUf5XTSSUkuvfMygg6qyFmW7fqjjHxoGTySMQ5TfF006QenZmtcSSbJmd71wLYY04xxIS7vNpJg==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
