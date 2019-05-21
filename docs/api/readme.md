@@ -126,7 +126,7 @@ When directing requests at a url protected by CloudFlare's CDN you should set th
 
 ### `proxyHeadersIgnore`
 
-* Default `['host', 'accept']`
+* Default `['accept', 'host', 'cf-ray', 'cf-connecting-ip']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
 
