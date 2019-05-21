@@ -52,6 +52,12 @@ Globally set a header to all subsequent requests.
 This method should probably not be called inside hooks as it is global and will apply to all future requests
 :::
 
+:::tip
+Please note that HTTP headers are case-insensitive. Therefore all header names will be converted to lower-case to make sure that if you set the same header twice but with different casing the last one set will be used.
+
+See also [this comment](https://github.com/sindresorhus/ky/issues/105#issuecomment-470169100) in the Ky repository for more information
+:::
+
 Parameters:
 
 * **name**: Name of the header
