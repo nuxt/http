@@ -12,7 +12,7 @@ let reqCtr = 1
 export default {
   computed: {
     httpSessionId() {
-      return this.$http._defaults.headers.sessionId
+      return this.$http._defaults.headers.sessionid
     },
 
     httpEncoding() {
