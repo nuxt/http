@@ -16,7 +16,7 @@ export default {
     },
 
     httpEncoding() {
-      return this.$http._defaults.headers['Accept-Encoding']
+      return this.$http._defaults.headers['accept-encoding']
     }
   },
   fetch({ app, route }) {
