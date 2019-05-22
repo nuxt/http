@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.2.0](https://github.com/nuxt/http/compare/v0.1.2...v0.2.0) (2019-05-22)
+
+
+### Bug Fixes
+
+* lowercase `accept-encoding` header ([#43](https://github.com/nuxt/http/issues/43)) ([454807c](https://github.com/nuxt/http/commit/454807c))
+
+
+### Features
+
+* convert header names to lowercase ([#45](https://github.com/nuxt/http/issues/45)) ([7ad6645](https://github.com/nuxt/http/commit/7ad6645))
+
+
+
 ## [0.1.2](https://github.com/nuxt/http/compare/v0.1.1...v0.1.2) (2019-04-28)
 
 
