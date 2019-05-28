@@ -138,7 +138,7 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 
 Globally set a header to all subsequent requests
 
-See [here](/advanced.html#header-helpers) for usage info
+See [here](/guide/advanced.html#header-helpers) for usage info
 
 ### `setToken`
 
@@ -146,7 +146,7 @@ See [here](/advanced.html#header-helpers) for usage info
 
 Globally set a `Authorization` header for all subsequent requests
 
-See [here](/advanced.html#settoken-token-type) for usage info
+See [here](/guide/advanced.html#settoken-token-type) for usage info
 
 ## Hooks
 
@@ -156,13 +156,13 @@ The `arguments` listed below are those your hook will receive when it's called
 
 - arguments: `(config)`
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ### `onResponse`
 
 - arguments: `(response)`
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ### `onError`
 
@@ -170,12 +170,12 @@ See [here](/advanced.html#hooks) for usage info
 
 If the error originated from a request, the property `err.response` might be available
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ## HTTP Methods
 
 :::tip Usage
-See [here](/usage.html#making-requests) for usage information for below methods
+See [here](/guide/usage.html#making-requests) for usage information for below methods
 :::
 
 ### `delete`
