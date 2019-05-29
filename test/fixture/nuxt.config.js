@@ -15,6 +15,7 @@ module.exports = {
   ],
   http: {
     prefix: '/test_api',
+    timeout: 25000,
     proxy: true,
     retry: 1
   },
