@@ -110,6 +110,30 @@ By default, number of retries will be **2 times**, if `retry` value is set to `t
 http: {
   retry: 1
 }
+
+```
+### `serverTimeout`
+
+* Default: `false`
+
+Sets the timeout for the server requests in milliseconds
+
+```js
+http: {
+  serverTimeout: false
+}
+```
+
+### `clientTimeout`
+
+* Default: `false`
+
+Sets the timeout for the client requests in milliseconds
+
+```js
+http: {
+  clientTimeout: false
+}
 ```
 
 ### `proxyHeaders`
