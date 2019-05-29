@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/nuxt/http/compare/v0.2.0...v0.3.0) (2019-05-29)
+
+
+### Features
+
+* support setting timeout and disable by default ([#51](https://github.com/nuxt/http/issues/51)) ([53287dd](https://github.com/nuxt/http/commit/53287dd))
+
+
+### Reverts
+
+* revert converting header names to lowercase ([2b0f463](https://github.com/nuxt/http/commit/2b0f463))
+
+
+
 # [0.2.0](https://github.com/nuxt/http/compare/v0.1.2...v0.2.0) (2019-05-22)
 
 
