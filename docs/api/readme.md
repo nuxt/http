@@ -116,11 +116,11 @@ http: {
 
 * Default: `false`
 
-Sets the timeout for the server requests in milliseconds
+Sets the timeout for the server requests in milliseconds.
 
 ```js
 http: {
-  serverTimeout: false
+  serverTimeout: 2000
 }
 ```
 
@@ -128,11 +128,11 @@ http: {
 
 * Default: `false`
 
-Sets the timeout for the client requests in milliseconds
+Sets the timeout for the client requests in milliseconds.
 
 ```js
 http: {
-  clientTimeout: false
+  clientTimeout: 5000
 }
 ```
 
