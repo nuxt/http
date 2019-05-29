@@ -12,7 +12,7 @@ let reqCtr = 1
 export default {
   computed: {
     httpSessionId() {
-      return this.$http._defaults.headers.sessionid
+      return this.$http._defaults.headers.SessionId
     },
 
     httpEncoding() {
@@ -22,7 +22,7 @@ export default {
   fetch({ app, route }) {
     const doLogin = route.query.login !== undefined
     if (doLogin) {
-      app.$http.setHeader('sessionId', reqCtr++)
+      app.$http.setHeader('SessionId', reqCtr++)
     }
   }
 }
