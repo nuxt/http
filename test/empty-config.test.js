@@ -14,6 +14,7 @@ describe('empty config', () => {
     const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options
     expect(options.baseURL.toString()).toBe('http://localhost:3000/')
+    expect(options.timeout.toString()).toBe('false')
     expect(options.browserBaseURL.toString()).toBe('http://localhost:3000/')
   })
 })
