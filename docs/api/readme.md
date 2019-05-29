@@ -110,6 +110,30 @@ By default, number of retries will be **2 times**, if `retry` value is set to `t
 http: {
   retry: 1
 }
+
+```
+### `serverTimeout`
+
+* Default: `false`
+
+Sets the timeout for the server requests in milliseconds.
+
+```js
+http: {
+  serverTimeout: 2000
+}
+```
+
+### `clientTimeout`
+
+* Default: `false`
+
+Sets the timeout for the client requests in milliseconds.
+
+```js
+http: {
+  clientTimeout: 5000
+}
 ```
 
 ### `proxyHeaders`
@@ -126,7 +150,7 @@ When directing requests at a url protected by CloudFlare's CDN you should set th
 
 ### `proxyHeadersIgnore`
 
-* Default `['host', 'accept']`
+* Default `['accept', 'host', 'cf-ray', 'cf-connecting-ip']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
 
