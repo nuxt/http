@@ -6,7 +6,8 @@ describe('browserBaseURL', () => {
   beforeAll(async () => {
     nuxt = await setupMockNuxt({
       http: {
-        browserBaseURL: '/test_api'
+        browserBaseURL: '/test_api',
+        retry: true
       }
     })
   })
