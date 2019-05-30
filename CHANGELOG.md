@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.1](https://github.com/nuxt/http/compare/v0.3.0...v0.3.1) (2019-05-30)
+
+
+### Bug Fixes
+
+* handle false timeout ([d965efa](https://github.com/nuxt/http/commit/d965efa))
+
+
+
 # [0.3.0](https://github.com/nuxt/http/compare/v0.2.0...v0.3.0) (2019-05-29)
 
 
