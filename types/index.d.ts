@@ -107,14 +107,14 @@ interface NuxtHTTPInstance {
   /**
    * Set a header on all subsequent requests.
    * @param name - Header name.
-   * @param value - Heade value.
+   * @param value - Header value.
    */
   setHeader(name: string, value?: string | false): void
 
   /**
    * Set `Authorization` header on all subsequent requests.
    * @param name - Header name.
-   * @param value - Heade value.
+   * @param value - Header value.
    */
   setToken(token: string | false, type?: string): void
 
