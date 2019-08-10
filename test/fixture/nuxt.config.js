@@ -15,8 +15,11 @@ module.exports = {
   ],
   http: {
     prefix: '/test_api',
+    serverTimeout: 10000,
+    clientTimeout: 25000,
     proxy: true,
-    retry: 1
+    retry: 1,
+    https: true
   },
   build: {
     terser: false

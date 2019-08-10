@@ -110,6 +110,30 @@ By default, number of retries will be **2 times**, if `retry` value is set to `t
 http: {
   retry: 1
 }
+
+```
+### `serverTimeout`
+
+* Default: `false`
+
+Sets the timeout for the server requests in milliseconds.
+
+```js
+http: {
+  serverTimeout: 2000
+}
+```
+
+### `clientTimeout`
+
+* Default: `false`
+
+Sets the timeout for the client requests in milliseconds.
+
+```js
+http: {
+  clientTimeout: 5000
+}
 ```
 
 ### `proxyHeaders`
@@ -126,7 +150,7 @@ When directing requests at a url protected by CloudFlare's CDN you should set th
 
 ### `proxyHeadersIgnore`
 
-* Default `['host', 'accept']`
+* Default `['accept', 'host', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
 
@@ -138,7 +162,7 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 
 Globally set a header to all subsequent requests
 
-See [here](/advanced.html#header-helpers) for usage info
+See [here](/guide/advanced.html#header-helpers) for usage info
 
 ### `setToken`
 
@@ -146,7 +170,7 @@ See [here](/advanced.html#header-helpers) for usage info
 
 Globally set a `Authorization` header for all subsequent requests
 
-See [here](/advanced.html#settoken-token-type) for usage info
+See [here](/guide/advanced.html#settoken-token-type) for usage info
 
 ## Hooks
 
@@ -156,13 +180,13 @@ The `arguments` listed below are those your hook will receive when it's called
 
 - arguments: `(config)`
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ### `onResponse`
 
 - arguments: `(response)`
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ### `onError`
 
@@ -170,12 +194,12 @@ See [here](/advanced.html#hooks) for usage info
 
 If the error originated from a request, the property `err.response` might be available
 
-See [here](/advanced.html#hooks) for usage info
+See [here](/guide/advanced.html#hooks) for usage info
 
 ## HTTP Methods
 
 :::tip Usage
-See [here](/usage.html#making-requests) for usage information for below methods
+See [here](/guide/usage.html#making-requests) for usage information for below methods
 :::
 
 ### `delete`

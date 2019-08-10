@@ -48,7 +48,7 @@ async asyncData({ $http }) {
 ## Using in Component Methods
 
 :::warning Note
-`this` is not available in Nuxt's `asyncData` method, see [here](/usage.html#using-in-asyncdata) for how to use this module in `asyncData`
+`this` is not available in Nuxt's `asyncData` method, see [here](usage.html#using-in-asyncdata) for how to use this module in `asyncData`
 :::
 
 When you have access to `this`, you can use `this.$http`:
