@@ -5654,18 +5654,18 @@ kleur@^3.0.2:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-ky-universal@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/ky-universal/-/ky-universal-0.2.2.tgz#7a36e1a75641a98f878157463513965f799f5bfe"
-  integrity sha512-fb32o/fKy/ux2ALWa9HU2hvGtfOq7/vn2nH0FpVE+jwNzyTeORlAbj3Fiw+WLMbUlmVqZIWupnLZ2USHvqwZHw==
+ky-universal@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ky-universal/-/ky-universal-0.3.0.tgz#3fcbb0dd03da39b5f05100d9362a630d5e1d402e"
+  integrity sha512-CM4Bgb2zZZpsprcjI6DNYTaH3oGHXL2u7BU4DK+lfCuC4snkt9/WRpMYeKbBbXscvKkeqBwzzjFX2WwmKY5K/A==
   dependencies:
     abort-controller "^3.0.0"
-    node-fetch "^2.3.0"
+    node-fetch "^2.6.0"
 
-ky@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/ky/-/ky-0.11.2.tgz#4ffe6621d9d9ab61bf0f5500542e3a96d1ba0815"
-  integrity sha512-5Aou5BWue5/mkPqIRqzSWW+0Hkl403pr/2AIrCKYw7cVl/Xoe8Xe4KLBO0PRjbz7GnRe1/8wW1KhqQNFFE7/GQ==
+ky@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.12.0.tgz#c05be95e6745ba422a6d2cc8ae964164962279f9"
+  integrity sha512-t9b7v3V2fGwAcQnnDDQwKQGF55eWrf4pwi1RN08Fy8b/9GEwV7Ea0xQiaSW6ZbeghBHIwl8kgnla4vVo9seepQ==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
@@ -6272,6 +6272,11 @@ node-fetch@^2.2.0, node-fetch@^2.3.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.4.1.tgz#b2e38f1117b8acbedbe0524f041fb3177188255d"
   integrity sha512-P9UbpFK87NyqBZzUuDBDz4f6Yiys8xm8j7ACDbi6usvFm6KItklQUKjeoqTrYS/S1k6I8oaOC2YLLDr/gg26Mw==
+
+node-fetch@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-int64@^0.4.0:
   version "0.4.0"
