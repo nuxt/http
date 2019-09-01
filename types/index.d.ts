@@ -138,7 +138,7 @@ interface NuxtHTTPInstance {
    *
    * This hook enables you to globally handle request errors.
    */
-  onError(hook: (HTTPError) => void): void
+  onError(hook: (error: HTTPError) => void): void
 }
 
 declare module '@nuxt/vue-app' {
