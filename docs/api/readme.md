@@ -110,8 +110,10 @@ By default, number of retries will be **2 times**, if `retry` value is set to `t
 http: {
   retry: 1
 }
-
 ```
+
+You can also pass an object to have more control! See [ky docs](https://github.com/sindresorhus/ky#retry).
+
 ### `serverTimeout`
 
 * Default: `false`
