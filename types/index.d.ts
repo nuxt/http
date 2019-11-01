@@ -147,6 +147,13 @@ declare module '@nuxt/vue-app' {
   }
 }
 
+// Nuxt 2.9+
+declare module '@nuxt/types' {
+  interface Context {
+    $http: NuxtHTTPInstance
+  }
+}
+
 declare module 'vue/types/vue' {
   interface Vue {
     $http: NuxtHTTPInstance
