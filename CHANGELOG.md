@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.8](https://github.com/nuxt/http/compare/v0.3.7...v0.3.8) (2019-11-02)
+
+
+### Features
+
+* add `onRetry` hook ([#79](https://github.com/nuxt/http/issues/79)) ([3d0aa27](https://github.com/nuxt/http/commit/3d0aa27))
+
 ### [0.3.7](https://github.com/nuxt/http/compare/v0.3.6...v0.3.7) (2019-11-01)
 
 ### [0.3.6](https://github.com/nuxt/http/compare/v0.3.5...v0.3.6) (2019-11-01)
