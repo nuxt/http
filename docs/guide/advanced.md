@@ -29,9 +29,16 @@ For registering hooks, you have to create a nuxt plugin:
 **plugins/http.js**
 
 ```js
+import ky from 'ky-universal'
+
 export default function ({ $http }) {
   $http.onRequest(config => {
     console.log('Making request to ' + config.url)
+  })
+
+  $http.onRetry(async (request, options, errors, retryCount) => {
+    const token = await ky('https://example.com/refresh-token')
+    options.header.set('Authorization', `Bearer ${token}`)
   })
 
   $http.onError(error => {

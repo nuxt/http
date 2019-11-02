@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { ResponsePromise, Options, BeforeRequestHook, AfterResponseHook, HTTPError } from 'ky'
+import { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook, HTTPError } from 'ky'
 import './vuex'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
@@ -125,6 +125,13 @@ interface NuxtHTTPInstance {
    * This hook enables you to globally modify the requests right before it is sent. It will make no further changes to the request after this. The hook function receives the normalized options as the first argument. You could, for example, modify `options.headers` here.
    */
   onRequest(hook: BeforeRequestHook): void
+
+  /**
+   * Set a hook on `beforeRetry` (Before request is sent)
+   *
+   * This hook enables you to modify the request right before retry. It will make no further changes to the request after this. The hook function receives the normalized input and options, an error instance and the retry count as arguments. You could, for example, modify `options.headers` here.
+   */
+  onRetry(hook: BeforeRetryHook): void
 
   /**
    * Set a hook on `afterResponse` (After the response is received)
