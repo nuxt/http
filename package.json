@@ -25,7 +25,7 @@
     "consola": "^2.10.1",
     "ky": "^0.15.0",
     "ky-universal": "^0.3.0",
-    "semver": "^6.3.0"
+    "semver": "^7.1.1"
   },
   "devDependencies": {
     "@babel/core": "latest",
