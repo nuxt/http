@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/nuxt/http/compare/v0.3.8...v0.3.9) (2020-01-30)
+
+
+### Features
+
+* enable advanced retry options ([#80](https://github.com/nuxt/http/issues/80)) ([bdae0c0](https://github.com/nuxt/http/commit/bdae0c0aab93e1e402747f949045acea31613aab))
+
+
+### Bug Fixes
+
+* use json serialization for plain array ([#87](https://github.com/nuxt/http/issues/87)) ([febf265](https://github.com/nuxt/http/commit/febf2658dc605dfae8762ce0f147cce192c1c0cb))
+* **module:** read port and host from options/cli before fallback ([bc58738](https://github.com/nuxt/http/commit/bc58738c6b1158bd6e6efd45372da9765b8da577))
+
 ### [0.3.8](https://github.com/nuxt/http/compare/v0.3.7...v0.3.8) (2019-11-02)
 
 
