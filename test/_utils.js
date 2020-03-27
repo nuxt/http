@@ -4,7 +4,7 @@ const defaultConfig = require('./fixture/nuxt.config')
 
 jest.setTimeout(60000)
 
-async function setupMockNuxt(config) {
+async function setupMockNuxt (config) {
   const nuxt = new Nuxt({
     ...defaultConfig,
     ...config,
@@ -24,7 +24,7 @@ async function setupMockNuxt(config) {
   return nuxt
 }
 
-async function setupNuxt(config) {
+async function setupNuxt (config) {
   const nuxt = new Nuxt({
     ...defaultConfig,
     ...config,

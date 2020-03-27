@@ -1,6 +1,74 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.4.0](https://github.com/nuxt/http/compare/v0.3.9...v0.4.0) (2020-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Require Node.js 10+
+
+### Bug Fixes
+
+* **module:** always set protocol to https when `https: true` is set ([50ef8e0](https://github.com/nuxt/http/commit/50ef8e05f7958a5270fdad7dc0f543f5af5bf9fd))
+
+
+* **deps:** update all non-major dependencies ([#90](https://github.com/nuxt/http/issues/90)) ([2f1411b](https://github.com/nuxt/http/commit/2f1411b64d742fbc8d1372ada5543ebc83629e1a))
+
+### [0.3.9](https://github.com/nuxt/http/compare/v0.3.8...v0.3.9) (2020-01-30)
+
+
+### Features
+
+* enable advanced retry options ([#80](https://github.com/nuxt/http/issues/80)) ([bdae0c0](https://github.com/nuxt/http/commit/bdae0c0aab93e1e402747f949045acea31613aab))
+
+
+### Bug Fixes
+
+* use json serialization for plain array ([#87](https://github.com/nuxt/http/issues/87)) ([febf265](https://github.com/nuxt/http/commit/febf2658dc605dfae8762ce0f147cce192c1c0cb))
+* **module:** read port and host from options/cli before fallback ([bc58738](https://github.com/nuxt/http/commit/bc58738c6b1158bd6e6efd45372da9765b8da577))
+
+### [0.3.8](https://github.com/nuxt/http/compare/v0.3.7...v0.3.8) (2019-11-02)
+
+
+### Features
+
+* add `onRetry` hook ([#79](https://github.com/nuxt/http/issues/79)) ([3d0aa27](https://github.com/nuxt/http/commit/3d0aa27))
+
+### [0.3.7](https://github.com/nuxt/http/compare/v0.3.6...v0.3.7) (2019-11-01)
+
+### [0.3.6](https://github.com/nuxt/http/compare/v0.3.5...v0.3.6) (2019-11-01)
+
+
+### Features
+
+* **types:** provide nuxt 2.9 compatible types ([#78](https://github.com/nuxt/http/issues/78)) ([a6bab0f](https://github.com/nuxt/http/commit/a6bab0f))
+
+### [0.3.5](https://github.com/nuxt/http/compare/v0.3.4...v0.3.5) (2019-09-05)
+
+
+### Bug Fixes
+
+* **types:** fix argument of onError ([#67](https://github.com/nuxt/http/issues/67)) ([be10314](https://github.com/nuxt/http/commit/be10314))
+
+## [0.3.4](https://github.com/nuxt/http/compare/v0.3.3...v0.3.4) (2019-08-12)
+
+
+### Bug Fixes
+
+* **types:** replace `JSONValue import from ky to `unknown` ([#63](https://github.com/nuxt/http/issues/63)) ([aff7a35](https://github.com/nuxt/http/commit/aff7a35))
+
+
+
+## [0.3.3](https://github.com/nuxt/http/compare/v0.3.2...v0.3.3) (2019-07-24)
+
+
+### Bug Fixes
+
+* transpile ky ([#61](https://github.com/nuxt/http/issues/61)) ([2ce08de](https://github.com/nuxt/http/commit/2ce08de))
+
+
 
 ## [0.3.2](https://github.com/nuxt/http/compare/v0.3.1...v0.3.2) (2019-06-05)
 

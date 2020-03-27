@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { ResponsePromise, Options, BeforeRequestHook, AfterResponseHook, HTTPError, JSONValue } from 'ky'
+import { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook, HTTPError } from 'ky'
 import './vuex'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
@@ -61,7 +61,7 @@ interface NuxtHTTPInstance {
  * @param url - `Request` object, `URL` object, or URL string.
  * @returns Promise that resolves to JSON parsed value.
  */
-	$get<T = JSONValue>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
+	$get<T = unknown>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
 
 	/**
 	 * Fetches the `url` with the option `{method: 'post'}`.
@@ -69,7 +69,7 @@ interface NuxtHTTPInstance {
 	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-	$post<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
+	$post<T = unknown>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
 	 * Fetches the `url` with the option `{method: 'put'}`.
@@ -77,7 +77,7 @@ interface NuxtHTTPInstance {
 	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-	$put<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
+	$put<T = unknown>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
 	 * Fetches the `url` with the option `{method: 'patch'}`.
@@ -85,7 +85,7 @@ interface NuxtHTTPInstance {
 	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-	$patch<T = JSONValue>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
+	$patch<T = unknown>(url: Request | URL | string, body?: RequestBody, options?: Options): Promise<T>;
 
 	/**
 	 * Fetches the `url` with the option `{method: 'head'}`.
@@ -93,7 +93,7 @@ interface NuxtHTTPInstance {
 	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-	$head<T = JSONValue>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
+	$head<T = unknown>(url: Request | URL | string, options?: Omit<Options, 'body'>): Promise<T>;
 
 	/**
 	 * Fetches the `url` with the option `{method: 'delete'}`.
@@ -101,20 +101,20 @@ interface NuxtHTTPInstance {
 	 * @param url - `Request` object, `URL` object, or URL string.
 	 * @returns Promise that resolves to JSON parsed value.
 	 */
-	$delete<T = JSONValue>(url: Request | URL | string, options?: Options): Promise<T>;
+	$delete<T = unknown>(url: Request | URL | string, options?: Options): Promise<T>;
 
 
   /**
    * Set a header on all subsequent requests.
    * @param name - Header name.
-   * @param value - Heade value.
+   * @param value - Header value.
    */
   setHeader(name: string, value?: string | false): void
 
   /**
    * Set `Authorization` header on all subsequent requests.
    * @param name - Header name.
-   * @param value - Heade value.
+   * @param value - Header value.
    */
   setToken(token: string | false, type?: string): void
 
@@ -125,6 +125,13 @@ interface NuxtHTTPInstance {
    * This hook enables you to globally modify the requests right before it is sent. It will make no further changes to the request after this. The hook function receives the normalized options as the first argument. You could, for example, modify `options.headers` here.
    */
   onRequest(hook: BeforeRequestHook): void
+
+  /**
+   * Set a hook on `beforeRetry` (Before request is sent)
+   *
+   * This hook enables you to modify the request right before retry. It will make no further changes to the request after this. The hook function receives the normalized input and options, an error instance and the retry count as arguments. You could, for example, modify `options.headers` here.
+   */
+  onRetry(hook: BeforeRetryHook): void
 
   /**
    * Set a hook on `afterResponse` (After the response is received)
@@ -138,10 +145,17 @@ interface NuxtHTTPInstance {
    *
    * This hook enables you to globally handle request errors.
    */
-  onError(hook: (HTTPError) => void): void
+  onError(hook: (error: HTTPError) => void): void
 }
 
 declare module '@nuxt/vue-app' {
+  interface Context {
+    $http: NuxtHTTPInstance
+  }
+}
+
+// Nuxt 2.9+
+declare module '@nuxt/types' {
   interface Context {
     $http: NuxtHTTPInstance
   }
