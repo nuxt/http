@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/http",
-  "version": "0.3.9",
+  "version": "0.4.0",
   "description": "Universal HTTP Module for Nuxt.js",
   "license": "MIT",
   "author": "Pooya Parsa <pooya@pi0.ir>",

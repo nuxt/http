@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/nuxt/http/compare/v0.3.9...v0.4.0) (2020-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Require Node.js 10+
+
+### Bug Fixes
+
+* **module:** always set protocol to https when `https: true` is set ([50ef8e0](https://github.com/nuxt/http/commit/50ef8e05f7958a5270fdad7dc0f543f5af5bf9fd))
+
+
+* **deps:** update all non-major dependencies ([#90](https://github.com/nuxt/http/issues/90)) ([2f1411b](https://github.com/nuxt/http/commit/2f1411b64d742fbc8d1372ada5543ebc83629e1a))
+
 ### [0.3.9](https://github.com/nuxt/http/compare/v0.3.8...v0.3.9) (2020-01-30)
 
 
