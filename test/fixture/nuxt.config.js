@@ -18,8 +18,7 @@ module.exports = {
     serverTimeout: 10000,
     clientTimeout: 25000,
     proxy: true,
-    retry: 1,
-    https: true
+    retry: 1
   },
   build: {
     terser: false
