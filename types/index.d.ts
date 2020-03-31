@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook, HTTPError } from 'ky'
+import ky, { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook } from 'ky'
 import './vuex'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
@@ -145,7 +145,7 @@ interface NuxtHTTPInstance {
    *
    * This hook enables you to globally handle request errors.
    */
-  onError(hook: (error: HTTPError) => void): void
+  onError(hook: (error: ky.HTTPError) => void): void
 }
 
 declare module '@nuxt/vue-app' {
