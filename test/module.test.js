@@ -1,19 +1,22 @@
 const fetch = require('node-fetch')
+const { createBrowser } = require('tib')
 const { setupNuxt } = require('./_utils')
 
 const url = path => `http://localhost:3000${path}`
 
 describe('module', () => {
-  let nuxt
+  let nuxt, browser
 
   beforeAll(async () => {
     nuxt = await setupNuxt()
     await nuxt.builder.build()
     await nuxt.listen(3000)
+    browser = await createBrowser('puppeteer')
   }, 60000)
 
   afterAll(async () => {
     await nuxt.close()
+    await browser.close()
   })
 
   test('asyncData', async () => {
@@ -22,19 +25,15 @@ describe('module', () => {
   })
 
   test('mounted', async () => {
-    const window = await nuxt.renderAndGetWindow(url('/mounted'))
-    window.onNuxtReady(() => {
-      const html = window.document.body.innerHTML
-      expect(html).toContain('foo/bar')
-    })
+    const page = await browser.page(url('/mounted'))
+    const html = await page.getHtml()
+    expect(html).toContain('foo/bar')
   })
 
-  test('init', async () => {
-    const window = await nuxt.renderAndGetWindow(url('/mounted'))
-    window.onNuxtReady(() => {
-      const $http = window.$nuxt.$http
-      expect($http._defaults.xsrfHeaderName).toBe('X-CSRF-TOKEN')
-    })
+  test('defaults', async () => {
+    const page = await browser.page(url('/mounted'))
+    const defaults = await page.runScript(() => window.$nuxt.$http._defaults)
+    expect(defaults.headers.xsrfHeaderName).toBe('X-CSRF-TOKEN')
   })
 
   test('ssr', async () => {

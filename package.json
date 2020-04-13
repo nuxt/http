@@ -45,6 +45,8 @@
     "eslint-plugin-vue": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "puppeteer": "^2.1.1",
+    "standard-version": "latest",
+    "tib": "^0.7.4"
   }
 }
