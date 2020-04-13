@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Checks][checks-src]][checks-href]
 [![Codecov][codecov-src]][codecov-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
@@ -25,8 +25,8 @@ Copyright (c) Nuxt.js Team
 [npm-version-href]: https://npmjs.com/package/@nuxt/http
 [npm-downloads-src]: https://flat.badgen.net/npm/dt/@nuxt/http
 [npm-downloads-href]: https://npmjs.com/package/@nuxt/http
-[circle-ci-src]: https://flat.badgen.net/circleci/github/nuxt/http
-[circle-ci-href]: https://circleci.com/gh/nuxt/http
+[checks-src]: https://flat.badgen.net/github/checks/nuxt/http/dev
+[checks-href]: https://github.com/nuxt/http/actions
 [codecov-src]: https://flat.badgen.net/codecov/c/github/nuxt/http
 [codecov-href]: https://codecov.io/gh/nuxt/http
 [standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
