@@ -6,19 +6,36 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
-    displayAllHeaders: true,
-    sidebar: [
-      {
-        collapsable: false,
-        children: [
-          '/',
-          '/guide/',
-          '/guide/usage',
-          '/guide/advanced',
-          '/guide/migration'
-        ]
-      }
-    ],
+    displayAllHeaders: false,
+    sidebar: {
+      '/guide/': [
+        {
+          collapsable: false,
+          children: [
+            '/guide/',
+            '/guide/usage',
+            '/guide/advanced',
+            '/guide/migration'
+          ]
+        }
+      ],
+      '/api/': [
+        {
+          collapsable: false,
+          children: [
+            '/api/',
+            '/api/helpers',
+            '/api/hooks',
+            '/api/http-methods'
+          ]
+        }
+      ],
+      '/': [
+        ['/', 'Introduction'],
+        ['/guide/', 'Guide'],
+        ['/api/', 'API']
+      ]
+    },
     nav: [
       {
         text: 'Guide',

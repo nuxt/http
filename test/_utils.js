@@ -12,6 +12,7 @@ async function setupMockNuxt (config) {
   })
 
   nuxt.moduleContainer.addTemplate = jest.fn(nuxt.moduleContainer.addTemplate)
+  nuxt.moduleContainer.requireModule = jest.fn(nuxt.moduleContainer.requireModule)
 
   await nuxt.ready()
 

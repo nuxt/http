@@ -23,5 +23,8 @@ module.exports = {
   build: {
     terser: false
   },
-  plugins: ['~/plugins/http']
+  plugins: [
+    '~/plugins/instance',
+    '~/plugins/http'
+  ]
 }
