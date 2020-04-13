@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
 [![Codecov][codecov-src]][codecov-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
@@ -25,8 +25,8 @@ Copyright (c) Nuxt.js Team
 [npm-version-href]: https://npmjs.com/package/@nuxt/http
 [npm-downloads-src]: https://flat.badgen.net/npm/dt/@nuxt/http
 [npm-downloads-href]: https://npmjs.com/package/@nuxt/http
-[circle-ci-src]: https://flat.badgen.net/circleci/github/nuxt/http
-[circle-ci-href]: https://circleci.com/gh/nuxt/http
+[github-actions-ci-src]: https://github.com/nuxt/lmify/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/nuxt/lmify/actions?query=workflow%3Aci
 [codecov-src]: https://flat.badgen.net/codecov/c/github/nuxt/http
 [codecov-href]: https://codecov.io/gh/nuxt/http
 [standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
