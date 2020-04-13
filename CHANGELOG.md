@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### New Features
 
-- Allow creating new instances with `$http.create(kyOptions)` (#3) (#94)
+- Allow creating new instances with `$http.create(kyOptions)` (#3) (#94) ([docs](https://http.nuxtjs.org/guide/advanced.html#create-new-instance-based-on-defaults))
 - ‍Allow changing baseURL on runtime `$http.setBaseURL(baseURL)‍‍` (#82) (#94)
 
 ### Docs
@@ -23,8 +23,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Chore
 
-- Switch to Github Actions ([6205fdaa5e1552797fc8f743952cafc44169716f](https://github.com/nuxt/http/commit/6205fdaa5e1552797fc8f743952cafc44169716f))
-- Use [tib](https://github.com/nuxt/tib) for testing ([https://github.com/nuxt/http/commit/5c693a04b93dc7bb29f6f63c0e38c3db24c8e5a3])
+- Switch to Github Actions ([6205fdaa](https://github.com/nuxt/http/commit/6205fdaa5e1552797fc8f743952cafc44169716f))
+- Use [tib](https://github.com/nuxt/tib) for testing ([5c693a04](https://github.com/nuxt/http/commit/5c693a04b93dc7bb29f6f63c0e38c3db24c8e5a3))
 
 ## [0.4.0](https://github.com/nuxt/http/compare/v0.3.9...v0.4.0) (2020-03-27)
 
