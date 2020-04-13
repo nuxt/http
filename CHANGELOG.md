@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/nuxt/http/compare/v0.4.0...v0.5.0) (2020-04-13)
+
+
+### Features
+
+* add create helper and improve docs ([e37358f](https://github.com/nuxt/http/commit/e37358f5b2b6eb0c563ed5e85ce915faf9e3f168))
+
+
+### Bug Fixes
+
+* rename with-config to enable testing ([b1a91cb](https://github.com/nuxt/http/commit/b1a91cbe9327cbc337ec1b822d0fdf9f75119c73))
+* test failing ([255d8a1](https://github.com/nuxt/http/commit/255d8a17601ef77b3c875d0367b5fbad153dbc3c))
+* **types:** update types for `HTTPError` to `ky.HTTPError` ([#91](https://github.com/nuxt/http/issues/91)) ([3a9100f](https://github.com/nuxt/http/commit/3a9100f2fe5978a537bf6d7cd40206572a487dd4)), closes [sindresorhus/ky#241](https://github.com/sindresorhus/ky/issues/241)
+
 ## [0.4.0](https://github.com/nuxt/http/compare/v0.3.9...v0.4.0) (2020-03-27)
 
 
