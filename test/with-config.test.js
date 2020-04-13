@@ -15,8 +15,8 @@ describe('with-config', () => {
     const options = call[0].options
     expect(options.baseURL).toBe('http://localhost:3000/')
     expect(options.browserBaseURL).toBe('/test_api')
-    expect(options.clientTimeout).toBe(10000)
-    expect(options.serverTimeout).toBe(25000)
+    expect(options.serverTimeout).toBe(10000)
+    expect(options.clientTimeout).toBe(25000)
   })
 
   test('should set https to baseURL', async () => {
