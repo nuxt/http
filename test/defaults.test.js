@@ -77,7 +77,7 @@ describe('defaults', () => {
     })
     expect(nuxt.moduleContainer.addTemplate).toBeDefined()
     expect(nuxt.moduleContainer.requireModule).toBeDefined()
-    expect(nuxt.moduleContainer.requireModule.mock.calls[0][0]).toStrictEqual([ '@nuxtjs/proxy', {} ])
+    expect(nuxt.moduleContainer.requireModule.mock.calls[0][0]).toStrictEqual(['@nuxtjs/proxy', {}])
   })
 
   test('should include @nuxtjs/proxy module and give proxy options', async () => {
@@ -90,6 +90,6 @@ describe('defaults', () => {
     })
     expect(nuxt.moduleContainer.addTemplate).toBeDefined()
     expect(nuxt.moduleContainer.requireModule).toBeDefined()
-    expect(nuxt.moduleContainer.requireModule.mock.calls[0][0]).toStrictEqual([ '@nuxtjs/proxy', { hello: true } ])
+    expect(nuxt.moduleContainer.requireModule.mock.calls[0][0]).toStrictEqual(['@nuxtjs/proxy', { hello: true }])
   })
 })
