@@ -113,3 +113,24 @@ this.$http.setToken('123', 'Bearer', ['post', 'delete'])
 // Removes default Authorization header
 this.$http.setToken(false)
 ```
+
+## Create new instance based on defaults
+
+If you need to create your own [ky instance](https://github.com/sindresorhus/ky#kycreatedefaultoptions) which based on `$http` defaults, you can use the `create(options)` method.
+
+```js
+// plugins/github.js
+export default function ({ $http, env }, inject) {
+  // Create a custom HTTP instance
+  const $github = $http.create({
+    // See https://github.com/sindresorhus/ky#options
+  })
+
+  // Set baseURL to something different
+  $github.setBaseURL('https://api.github.com')
+  $github.setToken(env.GITHUB_TOKEN, 'token')
+
+  // Inject to context as $github
+  inject('github', $github)
+}
+```

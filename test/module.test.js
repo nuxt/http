@@ -65,4 +65,11 @@ describe('module', () => {
 
     expect(result).toBe('gzip, deflate')
   })
+
+  test('instance', async () => {
+    const html = await fetch(url('/instance')).then(r => r.text())
+
+    expect(html).toContain('prefixUrl:https://jsonplaceholder.typicode.com/')
+    expect(html).toContain('testing:oui')
+  })
 })

@@ -7,6 +7,7 @@ The nuxt-community axios module is still supported and maintained. The HTTP modu
 :::
 
 ## Differences
+
 - There is no scope for [`setHeader`](/api/#setheader), [`setToken`](/api/#settoken)<br/>
 _When calling these methods they apply to the global scope and are used for all future requests_
 - The axios hooks `onRequestError` and `onResponseError` are unified<br/>
