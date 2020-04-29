@@ -16,10 +16,11 @@ You can use methods to convert response stream into usable data:
 
 See [ky](https://github.com/sindresorhus/ky#options) docs for all available options.
 
-**Example: Get a json file**
+**Example: GET JSON data**
 
 ```js
-await $http.get('https://unpkg.com/nuxt/package.json').json()
+const res = await $http.get('https://unpkg.com/nuxt/package.json')
+const data = await res.json()
 ```
 
 Alternatively for json only you can use `$` prefixed shortcut:
@@ -28,7 +29,7 @@ Alternatively for json only you can use `$` prefixed shortcut:
 await $http.$get('https://unpkg.com/nuxt/package.json')
 ```
 
-**Example: Post with JSON body**
+**Example: POST with JSON body**
 
 ```js
 await $http.post('http://api.con', { foo: 'bar' })
@@ -40,10 +41,20 @@ For `asyncData` and `fetch` you can access instance from context:
 
 ```js
 async asyncData({ $http }) {
-  const ip = await $http.get('http://icanhazip.com').text()
+  const res = await $http.get('http://icanhazip.com')
+  const ip = await res.text()
   return { ip }
 }
 ```
+
+**Example: GET JSON data using prefixed**
+
+```js
+async asyncData({ $http }) {
+  const users = await $http.$get('https://reqres.in/api/users')
+  return { users }
+```
+
 
 ## Using in Component Methods
 
@@ -56,7 +67,8 @@ When you have access to `this`, you can use `this.$http`:
 ```js
 methods: {
   async fetchSomething() {
-    const ip = await this.$http.get('http://icanhazip.com').text()
+    const res = await this.$http.get('http://icanhazip.com')
+    const ip = await res.text()
     this.ip = ip
   }
 }
@@ -71,7 +83,8 @@ For store actions you can also use `this.$http`:
 {
   actions: {
     async getIP ({ commit }) {
-      const ip = await this.$http.get('http://icanhazip.com').text()
+      const res = await this.$http.get('http://icanhazip.com')
+      const ip = await res.text()
       commit('SET_IP', ip)
     }
   }
