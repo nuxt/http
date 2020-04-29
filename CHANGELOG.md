@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/nuxt/http/compare/v0.5.0...v0.5.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* remove leading slash when using prefixUrl ([#96](https://github.com/nuxt/http/issues/96)) ([10fbd67](https://github.com/nuxt/http/commit/10fbd679664c533e8a5fa45afb1f56ac945d8cfa))
+
 ## [0.5.0](https://github.com/nuxt/http/compare/v0.4.0...v0.5.0) (2020-04-13)
 
 
