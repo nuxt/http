@@ -10,19 +10,19 @@
 let reqCtr = 1
 
 export default {
-  computed: {
-    httpSessionId() {
-      return this.$http._defaults.headers.SessionId
-    },
-
-    httpEncoding() {
-      return this.$http._defaults.headers['accept-encoding']
-    }
-  },
-  fetch({ app, route }) {
+  fetch ({ app, route }) {
     const doLogin = route.query.login !== undefined
     if (doLogin) {
       app.$http.setHeader('SessionId', reqCtr++)
+    }
+  },
+  computed: {
+    httpSessionId () {
+      return this.$http._defaults.headers.common.SessionId
+    },
+
+    httpEncoding () {
+      return this.$http._defaults.headers.common['accept-encoding']
     }
   }
 }
