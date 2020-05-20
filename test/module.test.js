@@ -33,7 +33,7 @@ describe('module', () => {
   test('defaults', async () => {
     const page = await browser.page(url('/mounted'))
     const defaults = await page.runScript(() => window.$nuxt.$http._defaults)
-    expect(defaults.headers.common.xsrfHeaderName).toBe('X-CSRF-TOKEN')
+    expect(defaults.headers.xsrfHeaderName).toBe('X-CSRF-TOKEN')
   })
 
   test('ssr', async () => {

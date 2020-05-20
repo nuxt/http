@@ -150,19 +150,7 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 
 Headers added to all requests. If provided, will be merged with the defaults.
 
-```js
-{
-    common: {
-      'Accept': 'application/json, text/plain, */*'
-    },
-    delete: {},
-    get: {},
-    head: {},
-    post: {},
-    put: {},
-    patch: {}
-}
-```
+* Default: `{}`
 
 :::tip Note
 Do NOT include any credentials or tokens here. One can easily access them.

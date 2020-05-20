@@ -18,11 +18,11 @@ export default {
   },
   computed: {
     httpSessionId () {
-      return this.$http._defaults.headers.common.SessionId
+      return this.$http._defaults.headers.SessionId
     },
 
     httpEncoding () {
-      return this.$http._defaults.headers.common['accept-encoding']
+      return this.$http._defaults.headers['accept-encoding']
     }
   }
 }
