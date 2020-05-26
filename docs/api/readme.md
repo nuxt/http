@@ -145,3 +145,17 @@ When directing requests at a url protected by CloudFlare's CDN you should set th
 * Default `['accept', 'host', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
+
+### `headers`
+
+Headers added to all requests. If provided, will be merged with the defaults.
+
+* Default: `{}`
+
+:::tip Note
+Do NOT include any credentials or tokens here. One can easily access them.
+:::
+
+:::tip Note
+This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.
+:::

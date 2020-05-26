@@ -107,9 +107,6 @@ this.$http.setToken('456')
 // Adds header: `Authorization: Bearer 123` to all requests
 this.$http.setToken('123', 'Bearer')
 
-// Adds header: `Authorization: Bearer 123` to only post and delete requests
-this.$http.setToken('123', 'Bearer', ['post', 'delete'])
-
 // Removes default Authorization header
 this.$http.setToken(false)
 ```
