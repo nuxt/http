@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/nuxt/http/compare/v0.5.1...v0.5.2) (2020-06-05)
+
+
+### Features
+
+* allow adding custom headers with nuxt config ([#101](https://github.com/nuxt/http/issues/101)) ([2839260](https://github.com/nuxt/http/commit/2839260ea97b18f259f79bb3ea0e97b0aa7228c3))
+* support baseUrl and remove port :443 and :80 when http or https ([#103](https://github.com/nuxt/http/issues/103)) ([fc3e78e](https://github.com/nuxt/http/commit/fc3e78e1307455df506dbc8f6ba5269f28f6e364))
+
 ### [0.5.1](https://github.com/nuxt/http/compare/v0.5.0...v0.5.1) (2020-04-29)
 
 
