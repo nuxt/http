@@ -13,7 +13,7 @@ describe('defaults', () => {
     expect(options.clientTimeout).toBe(false)
     expect(options.serverTimeout).toBe(false)
     expect(options.proxyHeaders).toBe(true)
-    expect(options.proxyHeadersIgnore).toStrictEqual(['accept', 'host', 'cf-ray', 'cf-connecting-ip', 'content-length'])
+    expect(options.proxyHeadersIgnore).toStrictEqual(['accept', 'host', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type'])
     expect(options.https).toBe(false)
     expect(options.retry).toBe(0)
   })
