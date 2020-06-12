@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://github.com/nuxt/http/compare/v0.5.2...v0.5.3) (2020-06-12)
+
+
+### Features
+
+* `debug` option ([#109](https://github.com/nuxt/http/issues/109)) ([874b668](https://github.com/nuxt/http/commit/874b668e1e98774e9ad0ef12d402605d00397fb4))
+* https detection ([#106](https://github.com/nuxt/http/issues/106)) ([8ae0cd5](https://github.com/nuxt/http/commit/8ae0cd5655752e15d6d5296ef9fed53a843f0fca)), closes [nuxt-community/axios-module#260](https://github.com/nuxt-community/axios-module/issues/260)
+
+
+### Bug Fixes
+
+* ignore proxy headers `content-md4` and `content-type` ([#107](https://github.com/nuxt/http/issues/107)) ([4152f87](https://github.com/nuxt/http/commit/4152f874a168dcdbceadd92b178b6213b535856b))
+* use local version of ky-universal ([#111](https://github.com/nuxt/http/issues/111)) ([e7cb647](https://github.com/nuxt/http/commit/e7cb64704788e38fe0dc685b415b92b90b61df3f))
+
 ### [0.5.2](https://github.com/nuxt/http/compare/v0.5.1...v0.5.2) (2020-06-05)
 
 
