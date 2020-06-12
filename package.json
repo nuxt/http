@@ -9,6 +9,7 @@
   "types": "types/index.d.ts",
   "files": [
     "lib",
+    "ky-universal",
     "types/*.d.ts"
   ],
   "scripts": {
@@ -19,10 +20,11 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.0.0",
+    "abort-controller": "^3.0.0",
     "consola": "^2.12.2",
     "ky": "^0.20.0",
-    "ky-universal": "^0.7.0",
-    "semver": "^7.3.2"
+    "node-fetch": "^2.6.0",
+    "web-streams-polyfill": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "latest",
