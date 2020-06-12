@@ -46,6 +46,12 @@ Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseU
 
 If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
 
+## `debug`
+
+* Default: `false`
+
+Adds interceptors that logs http request and responses.
+
 ## `proxy`
 
 * Default: `false`
