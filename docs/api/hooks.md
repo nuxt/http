@@ -22,8 +22,8 @@ If the error originated from a request.
 
 Available properties:
 
-- `error.statusCode`
-- `error?.response?.data`
+- `error.statusCode` (may be undefined)
+- `error.response?.data`(may be undefined)
 
 You can optionally return a value or promise that can resolve for fallback response. If hook returns any value, other hooks **won't** be called.
 
