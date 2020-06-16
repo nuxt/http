@@ -3,7 +3,7 @@ module.exports = {
   handler (req, res) {
     if (req.url === '/error') {
       res.statusCode = 418
-      res.end('I\'m a teapot')
+      res.end('Detailed error message')
     }
 
     res.end(JSON.stringify({

@@ -2,19 +2,58 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [0.5.0](https://github.com/nuxt/http/compare/v0.4.0...v0.5.0) (2020-04-13)
+### [0.5.3](https://github.com/nuxt/http/compare/v0.5.2...v0.5.3) (2020-06-12)
 
 
 ### Features
 
-* add create helper and improve docs ([e37358f](https://github.com/nuxt/http/commit/e37358f5b2b6eb0c563ed5e85ce915faf9e3f168))
+* `debug` option ([#109](https://github.com/nuxt/http/issues/109)) ([874b668](https://github.com/nuxt/http/commit/874b668e1e98774e9ad0ef12d402605d00397fb4))
+* https detection ([#106](https://github.com/nuxt/http/issues/106)) ([8ae0cd5](https://github.com/nuxt/http/commit/8ae0cd5655752e15d6d5296ef9fed53a843f0fca)), closes [nuxt-community/axios-module#260](https://github.com/nuxt-community/axios-module/issues/260)
 
 
 ### Bug Fixes
 
-* rename with-config to enable testing ([b1a91cb](https://github.com/nuxt/http/commit/b1a91cbe9327cbc337ec1b822d0fdf9f75119c73))
-* test failing ([255d8a1](https://github.com/nuxt/http/commit/255d8a17601ef77b3c875d0367b5fbad153dbc3c))
-* **types:** update types for `HTTPError` to `ky.HTTPError` ([#91](https://github.com/nuxt/http/issues/91)) ([3a9100f](https://github.com/nuxt/http/commit/3a9100f2fe5978a537bf6d7cd40206572a487dd4)), closes [sindresorhus/ky#241](https://github.com/sindresorhus/ky/issues/241)
+* ignore proxy headers `content-md4` and `content-type` ([#107](https://github.com/nuxt/http/issues/107)) ([4152f87](https://github.com/nuxt/http/commit/4152f874a168dcdbceadd92b178b6213b535856b))
+* use local version of ky-universal ([#111](https://github.com/nuxt/http/issues/111)) ([e7cb647](https://github.com/nuxt/http/commit/e7cb64704788e38fe0dc685b415b92b90b61df3f))
+
+### [0.5.2](https://github.com/nuxt/http/compare/v0.5.1...v0.5.2) (2020-06-05)
+
+
+### Features
+
+* allow adding custom headers with nuxt config ([#101](https://github.com/nuxt/http/issues/101)) ([2839260](https://github.com/nuxt/http/commit/2839260ea97b18f259f79bb3ea0e97b0aa7228c3))
+* support baseUrl and remove port :443 and :80 when http or https ([#103](https://github.com/nuxt/http/issues/103)) ([fc3e78e](https://github.com/nuxt/http/commit/fc3e78e1307455df506dbc8f6ba5269f28f6e364))
+
+### [0.5.1](https://github.com/nuxt/http/compare/v0.5.0...v0.5.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* remove leading slash when using prefixUrl ([#96](https://github.com/nuxt/http/issues/96)) ([10fbd67](https://github.com/nuxt/http/commit/10fbd679664c533e8a5fa45afb1f56ac945d8cfa))
+
+## [0.5.0](https://github.com/nuxt/http/compare/v0.4.0...v0.5.0) (2020-04-13)
+
+
+### New Features
+
+- Allow creating new instances with `$http.create(kyOptions)` (#3) (#94) ([docs](https://http.nuxtjs.org/guide/advanced.html#create-new-instance-based-on-defaults))
+- ‍Allow changing baseURL on runtime `$http.setBaseURL(baseURL)‍‍` (#82) (#94)
+
+### Docs
+
+#### Restructure sidebar (#94)
+
+- API > Hooks: https://http.nuxtjs.org/api/#hooks
+- API > HTTP methods: https://http.nuxtjs.org/api/#http-methods
+
+### Types
+
+- fix(types): update types for `HTTPError` to `ky.HTTPError` (#91)
+
+### Chore
+
+- Switch to Github Actions ([6205fdaa](https://github.com/nuxt/http/commit/6205fdaa5e1552797fc8f743952cafc44169716f))
+- Use [tib](https://github.com/nuxt/tib) for testing ([5c693a04](https://github.com/nuxt/http/commit/5c693a04b93dc7bb29f6f63c0e38c3db24c8e5a3))
 
 ## [0.4.0](https://github.com/nuxt/http/compare/v0.3.9...v0.4.0) (2020-03-27)
 
