@@ -23,7 +23,7 @@ const res = await $http.get('https://unpkg.com/nuxt/package.json')
 const data = await res.json()
 ```
 
-Alternatively for json only you can use `$` prefixed shortcut:
+Alternatively for json only you can use `$` prefixed shortcut that smartly parses response using [destr](https://github.com/nuxt-contrib/destr).
 
 ```js
 await $http.$get('https://unpkg.com/nuxt/package.json')

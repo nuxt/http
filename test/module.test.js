@@ -36,6 +36,11 @@ describe('module', () => {
     expect(defaults.headers.xsrfHeaderName).toBe('X-CSRF-TOKEN')
   })
 
+  test('error', async () => {
+    const html = await fetch(url('/error')).then(r => r.text())
+    expect(html).toMatch('res:{statusCode:418,message:"Detailed error message"}')
+  })
+
   test('ssr', async () => {
     const makeReq = login => fetch(url('/ssr' + (login ? '?login' : '')))
       .then(r => r.text())
