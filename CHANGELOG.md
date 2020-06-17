@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/nuxt/http/compare/v0.5.3...v0.5.4) (2020-06-17)
+
+
+### Features
+
+* improve `$` helpers and error object ([#113](https://github.com/nuxt/http/issues/113)) ([ada7387](https://github.com/nuxt/http/commit/ada73879f7891fbec712e41188bba70ee829adc2))
+
 ### [0.5.3](https://github.com/nuxt/http/compare/v0.5.2...v0.5.3) (2020-06-12)
 
 
