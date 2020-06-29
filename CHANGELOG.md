@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/nuxt/http/compare/v0.5.5...v0.5.6) (2020-06-29)
+
+
+### Bug Fixes
+
+* **plugin:** allow reusing error.response.json ([77b084b](https://github.com/nuxt/http/commit/77b084bc01ae9f95a33ad49a84d99c8765c8725a))
+
 ### [0.5.5](https://github.com/nuxt/http/compare/v0.5.4...v0.5.5) (2020-06-17)
 
 ### [0.5.4](https://github.com/nuxt/http/compare/v0.5.3...v0.5.4) (2020-06-17)
