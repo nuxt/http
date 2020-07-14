@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.8](https://github.com/nuxt/http/compare/v0.5.7...v0.5.8) (2020-07-14)
+
+
+### Features
+
+* handle runtimeConfig and static target ([b9f5e05](https://github.com/nuxt/http/commit/b9f5e053d393d6a2f695df04d1d3bbc0ac54123f))
+
+
+### Bug Fixes
+
+* build.transpile should be an array ([823204c](https://github.com/nuxt/http/commit/823204c399149cc149f7a5c31bf93bd6fd729e28)), closes [#115](https://github.com/nuxt/http/issues/115)
+
 ### [0.5.7](https://github.com/nuxt/http/compare/v0.5.6...v0.5.7) (2020-06-29)
 
 ### [0.5.6](https://github.com/nuxt/http/compare/v0.5.5...v0.5.6) (2020-06-29)
