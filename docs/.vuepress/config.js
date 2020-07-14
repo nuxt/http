@@ -24,6 +24,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/api/',
+            '/api/runtime-config',
             '/api/helpers',
             '/api/hooks',
             '/api/http-methods'

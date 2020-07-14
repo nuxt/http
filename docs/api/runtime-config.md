@@ -1,0 +1,34 @@
+# Runtime Config
+
+The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production. Otherwise, the values will be hard coded during build and won't change until the next build.
+
+Supported options:
+
+- `baseURL`
+- `browserBaseURL`
+
+**nuxt.config.js**
+
+```js
+export default {
+  modules: [
+    '@nuxt/http'
+  ],
+
+  http: {
+    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    http: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
+
+  privateRuntimeConfig: {
+    http: {
+      baseURL: process.env.BASE_URL
+    }
+  }
+}
+```
