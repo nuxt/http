@@ -91,4 +91,56 @@ describe('with-config', () => {
     expect(nuxt.moduleContainer.requireModule).toBeDefined()
     expect(nuxt.moduleContainer.requireModule.mock.calls[0][0]).toStrictEqual(['@nuxtjs/proxy', { hello: true }])
   })
+
+  test('should handle `baseUrl` key', async () => {
+    const nuxt = await setupMockNuxt({
+      http: {
+        baseUrl: 'http://localhost:5000'
+      }
+    })
+    expect(nuxt.moduleContainer.addTemplate).toBeDefined()
+    const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
+    const options = call[0].options
+    expect(options.baseURL).toBe('http://localhost:5000')
+  })
+
+  test('should remove `:80` port if http', async () => {
+    const nuxt = await setupMockNuxt({
+      http: {
+        baseUrl: 'http://localhost:80'
+      }
+    })
+    expect(nuxt.moduleContainer.addTemplate).toBeDefined()
+    const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
+    const options = call[0].options
+    expect(options.baseURL).toBe('http://localhost')
+  })
+
+  test('should remove `:443` port if https', async () => {
+    const nuxt = await setupMockNuxt({
+      http: {
+        baseUrl: 'https://localhost:443'
+      }
+    })
+    expect(nuxt.moduleContainer.addTemplate).toBeDefined()
+    const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
+    const options = call[0].options
+    expect(options.baseURL).toBe('https://localhost')
+  })
+
+  test('should handle static target', async () => {
+    const nuxt = await setupMockNuxt({
+      target: 'static'
+    })
+    expect(nuxt.moduleContainer.addTemplate).toBeDefined()
+    const call = nuxt.moduleContainer.addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
+    const options = call[0].options
+    expect(nuxt.options.privateRuntimeConfig.http).toBeDefined()
+    expect(nuxt.options.publicRuntimeConfig.http).toBeDefined()
+    await nuxt.callHook('listen', null, { port: 1234, host: 'hello' })
+    expect(nuxt.options.privateRuntimeConfig.http.baseURL).toBe('http://hello:1234/test_api')
+    expect(nuxt.options.publicRuntimeConfig.http.browserBaseURL).toBe('/test_api')
+    expect(options.baseURL).toBe('http://localhost:3000/test_api')
+    expect(options.browserBaseURL).toBe('/test_api')
+  })
 })
