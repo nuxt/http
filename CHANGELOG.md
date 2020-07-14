@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.9](https://github.com/nuxt/http/compare/v0.5.8...v0.5.9) (2020-07-14)
+
+
+### Bug Fixes
+
+* set default host ([18e9b11](https://github.com/nuxt/http/commit/18e9b11c395d7ef362ca75dee1ab97c939121864))
+
 ### [0.5.8](https://github.com/nuxt/http/compare/v0.5.7...v0.5.8) (2020-07-14)
 
 
