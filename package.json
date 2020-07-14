@@ -21,9 +21,9 @@
   "dependencies": {
     "@nuxtjs/proxy": "^2.0.0",
     "abort-controller": "^3.0.0",
-    "consola": "^2.13.0",
+    "consola": "^2.14.0",
     "destr": "^1.0.0",
-    "ky": "^0.20.0",
+    "ky": "^0.21.0",
     "node-fetch": "^2.6.0",
     "web-streams-polyfill": "^2.1.1"
   },
