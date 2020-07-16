@@ -19,7 +19,7 @@
     "test": "yarn lint && jest -i"
   },
   "dependencies": {
-    "@nuxtjs/proxy": "^2.0.0",
+    "@nuxtjs/proxy": "^2.0.1",
     "abort-controller": "^3.0.0",
     "consola": "^2.14.0",
     "destr": "^1.0.0",
