@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.10](https://github.com/nuxt/http/compare/v0.5.9...v0.5.10) (2020-07-16)
+
+
+### Bug Fixes
+
+* **plugin:** debug option broken ([#117](https://github.com/nuxt/http/issues/117)) ([6bc1295](https://github.com/nuxt/http/commit/6bc12959a59b855dc9020e56fa0d0acb7f0e54d0))
+
 ### [0.5.9](https://github.com/nuxt/http/compare/v0.5.8...v0.5.9) (2020-07-14)
 
 
