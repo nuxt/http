@@ -1,4 +1,5 @@
-const fetch = require('node-fetch')
+const fetch = process.server ? require('node-fetch/lib/index.js') : require('node-fetch/browser.js')
+
 const AbortController = require('abort-controller')
 
 const TEN_MEGABYTES = 1000 * 1000 * 10
