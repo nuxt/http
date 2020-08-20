@@ -1,11 +1,11 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch/lib/index.js')
 const AbortController = require('abort-controller')
 
 const TEN_MEGABYTES = 1000 * 1000 * 10
 
 if (!global.fetch) {
   global.fetch = (url, options) => {
-  	console.log(1);
+  	console.log("require.resolve('node-fetch')", require.resolve('node-fetch'));
   	console.log(fetch);
   	return fetch(url, { highWaterMark: TEN_MEGABYTES, ...options })
   }
