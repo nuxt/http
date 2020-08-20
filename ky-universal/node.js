@@ -1,4 +1,6 @@
-const fetch = require('node-fetch/lib/index.js')
+const _interopDefault = (ex) => ex && (typeof ex === 'object') && ('default' in ex) ? ex.default : ex
+
+const fetch = _interopDefault(require('node-fetch'))
 const AbortController = require('abort-controller')
 
 const TEN_MEGABYTES = 1000 * 1000 * 10
