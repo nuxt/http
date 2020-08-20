@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.11](https://github.com/nuxt/http/compare/v0.5.10...v0.5.11) (2020-08-20)
+
+
+### Bug Fixes
+
+* **ky-universal:** server importing es bundle ([#121](https://github.com/nuxt/http/issues/121)) ([029dea6](https://github.com/nuxt/http/commit/029dea6f04f82f8df36459a200751af683788302))
+
 ### [0.5.10](https://github.com/nuxt/http/compare/v0.5.9...v0.5.10) (2020-07-16)
 
 
