@@ -5,8 +5,6 @@ const TEN_MEGABYTES = 1000 * 1000 * 10
 
 if (!global.fetch) {
   global.fetch = (url, options) => {
-  	console.log("require.resolve('node-fetch')", require.resolve('node-fetch'));
-  	console.log(fetch);
   	return fetch(url, { highWaterMark: TEN_MEGABYTES, ...options })
   }
 }
