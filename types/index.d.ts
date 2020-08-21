@@ -156,7 +156,7 @@ interface NuxtHTTPInstance {
   /**
    * If you need to create your own ky instance which based on $http defaults, you can use the create(options) method.
    */
-  create(options: Partial<Options>): void
+  create(options: Partial<Options>): NuxtHTTPInstance
 }
 
 declare module '@nuxt/vue-app' {
