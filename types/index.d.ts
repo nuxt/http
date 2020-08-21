@@ -105,6 +105,12 @@ interface NuxtHTTPInstance {
 
 
   /**
+   * Set the baseURL for all subsequent requests.
+   * @param baseURL - the base URL (e.g. `https://myapi.com/`)
+   */
+  setBaseURL(baseURL: string): void
+
+  /**
    * Set a header on all subsequent requests.
    * @param name - Header name.
    * @param value - Header value.
@@ -146,6 +152,11 @@ interface NuxtHTTPInstance {
    * This hook enables you to globally handle request errors.
    */
   onError(hook: (error: ky.HTTPError) => void): void
+
+  /**
+   * If you need to create your own ky instance which based on $http defaults, you can use the create(options) method.
+   */
+  create(options: Partial<Options>): NuxtHTTPInstance
 }
 
 declare module '@nuxt/vue-app' {
