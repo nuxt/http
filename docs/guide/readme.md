@@ -33,3 +33,7 @@ module.exports = {
 ```
 
 See [http's options](/api/#options).
+
+::: warning
+Note that this module does not currently support IE 11.
+:::
