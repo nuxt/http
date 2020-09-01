@@ -34,7 +34,6 @@
     "babel-eslint": "latest",
     "babel-jest": "latest",
     "codecov": "latest",
-    "core-js": "2",
     "eslint": "latest",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
