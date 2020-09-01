@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.12](https://github.com/nuxt/http/compare/v0.5.11...v0.5.12) (2020-09-01)
+
+
+### Bug Fixes
+
+* **types:** add missing types for `create` and `setBaseURL` ([#122](https://github.com/nuxt/http/issues/122)) ([c002aaa](https://github.com/nuxt/http/commit/c002aaa97c45fa5dfd91325a005fd5cc18a55b57))
+
 ### [0.5.11](https://github.com/nuxt/http/compare/v0.5.10...v0.5.11) (2020-08-20)
 
 
