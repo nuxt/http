@@ -25,7 +25,7 @@ Copyright (c) Nuxt.js Team
 [npm-version-href]: https://npmjs.com/package/@nuxt/http
 [npm-downloads-src]: https://flat.badgen.net/npm/dm/@nuxt/http
 [npm-downloads-href]: https://npmjs.com/package/@nuxt/http
-[checks-src]: https://flat.badgen.net/github/checks/nuxt/http/dev
+[checks-src]: https://flat.badgen.net/github/checks/nuxt/http/master
 [checks-href]: https://github.com/nuxt/http/actions
 [codecov-src]: https://flat.badgen.net/codecov/c/github/nuxt/http
 [codecov-href]: https://codecov.io/gh/nuxt/http
