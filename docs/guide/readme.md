@@ -33,3 +33,7 @@ module.exports = {
 ```
 
 See [http's options](/api/#options).
+
+::: warning
+Note that this module does not currently support IE 11 because of using [ky](https://github.com/sindresorhus/ky) ([open issue](https://github.com/nuxt/http/issues/126))
+:::
