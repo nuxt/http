@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.13](https://github.com/nuxt/http/compare/v0.5.12...v0.5.13) (2020-09-26)
+
+
+### Bug Fixes
+
+* use regex to avoid falsely replacing ports starting with 80 ([#124](https://github.com/nuxt/http/issues/124)) ([e981e62](https://github.com/nuxt/http/commit/e981e622891a347ad0ba651bf7c48db29a989f84))
+
 ### [0.5.12](https://github.com/nuxt/http/compare/v0.5.11...v0.5.12) (2020-09-01)
 
 
