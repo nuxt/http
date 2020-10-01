@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/nuxt/http/compare/v0.5.13...v0.6.0) (2020-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** (ky) remove response property for the first argument passed to `beforeRetry` hook. You can access it on `error.response` instead.
+
+### Features
+
+* **deps:** update dependency ky to ^0.24.0 ([#131](https://github.com/nuxt/http/issues/131)) ([6d16a87](https://github.com/nuxt/http/commit/6d16a87d3c94e190312fc292c074be40a28bd1fe))
+
 ### [0.5.13](https://github.com/nuxt/http/compare/v0.5.12...v0.5.13) (2020-09-26)
 
 
