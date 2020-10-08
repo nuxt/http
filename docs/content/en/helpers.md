@@ -1,6 +1,6 @@
 ---
 title: Helpers
-description: ''
+description: 'Helpers available on $http instance.'
 position: 7
 category: API
 --- 

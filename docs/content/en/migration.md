@@ -1,6 +1,6 @@
 ---
 title: Migration Guides
-description: ''
+description: 'How to migrate from Axios module'
 position: 10
 category: Migration
 ---

@@ -1,6 +1,6 @@
 ---
 title: Hooks
-description: ''
+description: 'Hooks with arguments.'
 position: 8
 category: API
 ---

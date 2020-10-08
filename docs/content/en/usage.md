@@ -1,6 +1,6 @@
 ---
 title: Usage
-description: ''
+description: 'How to use this module'
 position: 3
 category: Getting Started
 ---

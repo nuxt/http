@@ -1,6 +1,6 @@
 ---
 title: Advanced
-description: ''
+description: 'Advanced concepts'
 position: 4
 category: Getting Started
 ---

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: ''
+description: 'HTTP module for Nuxt.js provides a universal way to make HTTP requests to the API backend.'
 position: 1
 category: ''
 menuTitle: 'Intro'

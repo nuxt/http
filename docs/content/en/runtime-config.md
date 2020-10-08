@@ -1,6 +1,6 @@
 ---
 title: Runtime Config
-description: ''
+description: 'The use of runtime config is mandatory in case of using environment variables in production.'
 position: 6
 category: API
 ---

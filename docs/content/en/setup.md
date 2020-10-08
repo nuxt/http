@@ -1,6 +1,6 @@
 ---
 title: Setup
-description: ''
+description: 'How to setup your module'
 position: 2
 category: Getting Started
 ---

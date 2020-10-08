@@ -1,6 +1,6 @@
 ---
 title: Options
-description: ''
+description: 'You can pass options using module options or http section in nuxt.config.js'
 position: 5
 category: API
 ---

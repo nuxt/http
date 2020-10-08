@@ -1,6 +1,6 @@
 ---
 title: HTTP Methods
-description: ''
+description: 'HTTP Methods'
 position: 9
 category: API
 ---
