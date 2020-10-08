@@ -1,8 +1,15 @@
-# Helpers
+---
+title: Helpers
+description: ''
+position: 7
+category: API
+--- 
 
-:::tip Note
+<alert type="tip">
+
 Helpers available on `$http` instance.
-:::
+
+</alert>
 
 ## `setBaseURL`
 

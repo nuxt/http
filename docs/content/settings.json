@@ -1,0 +1,10 @@
+{
+  "title": "Http Module",
+  "url": "https://http.nuxtjs.org/",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "nuxt/http",
+  "twitter": "@nuxt_js"
+}

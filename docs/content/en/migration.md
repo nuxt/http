@@ -1,10 +1,17 @@
-# Migration Guide
+---
+title: Migration Guides
+description: ''
+position: 10
+category: Migration
+---
 
 This guide will help you to migrate from [Axios Module](https://github.com/nuxt-community/axios-module).
 
-:::tip Note
+<alert type="tip">
+
 The nuxt-community axios module is still supported and maintained. The HTTP module uses newer web technologies like fetch which might be beneficial
-:::
+
+</alert>
 
 ## Differences
 

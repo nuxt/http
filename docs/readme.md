@@ -1,13 +1,27 @@
-# Introduction
+# docs
 
-HTTP module for Nuxt.js provides a universal way to make HTTP requests to the API backend.
+## Setup
 
-This module is an alternative to [Axios Module](https://github.com/nuxt-community/axios-module). Behind the scenes it use [ky-universal](https://github.com/sindresorhus/ky-universal) and [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to make HTTP requests. Please see the [migration guide](./guide/migration) if you are currently using axios module and wish to migrate.
+Install dependencies:
 
-Starting from [v2.5.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.5.0), Nuxt.js has built-in support for universal fetch. However, this module provides several advantages:
+```bash
+yarn install
+```
 
-- The fluent [ky](https://github.com/sindresorhus/ky) API has been extended with enhancements and shortcuts
-- Highly customizable options support for [`BaseURL`](/api/#baseurl)
-- Automatically proxy cookies and headers when making requests from server side
-- Best practices to avoid token sharing when making server side requests
-- Easy proxy support to avoid CORS problems and making deployment easier
+## Development
+
+```bash
+yarn dev
+```
+
+## Static Generation
+
+This will create the `dist/` directory for publishing to static hosting:
+
+```bash
+yarn generate
+```
+
+To preview the static generated app, run `yarn start`
+
+For detailed explanation on how things work, checkout [nuxt/content](https://content.nuxtjs.org) and [@nuxt/content theme docs](https://content.nuxtjs.org/themes-docs).
