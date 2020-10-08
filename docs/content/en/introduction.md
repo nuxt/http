@@ -2,7 +2,7 @@
 title: Introduction
 description: ''
 position: 1
-category: Getting started
+category: Getting Started
 menuTitle: 'Intro'
 features:
   - The fluent ky API has been extended with enhancements and shortcuts
