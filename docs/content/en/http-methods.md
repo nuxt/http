@@ -1,13 +1,21 @@
+---
+title: HTTP Methods
+description: 'HTTP Methods'
+position: 9
+category: API
+---
 
-## HTTP Methods
+<alert type="tip">
 
-:::tip Usage
 See [here](/guide/usage.html#making-requests) for usage information for below methods.
-:::
 
-:::tip Note
+</alert>
+
+<alert type="tip">
+
 Each http method returns a `Promise`
-:::
+
+</alert>
 
 ### `delete`
 ### `get`

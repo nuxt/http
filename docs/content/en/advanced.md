@@ -1,4 +1,9 @@
-# Advanced
+---
+title: Advanced
+description: 'Advanced concepts'
+position: 4
+category: Getting Started
+---
 
 ## Hooks
 
@@ -58,15 +63,19 @@ export default function ({ $http }) {
 
 Globally set a header to all subsequent requests.
 
-:::warning
-This method should probably not be called inside hooks as it is global and will apply to all future requests
-:::
+<alert type="warning">
 
-:::tip
+This method should probably not be called inside hooks as it is global and will apply to all future requests
+
+</alert>
+
+<alert type="tip">
+
 Please note that HTTP headers are case-insensitive. Therefore all header names will be converted to lower-case to make sure that if you set the same header twice but with different casing the last one set will be used.
 
 See also [this comment](https://github.com/sindresorhus/ky/issues/105#issuecomment-470169100) in the Ky repository for more information
-:::
+
+</alert>
 
 Parameters:
 
@@ -91,9 +100,11 @@ this.$http.setHeader('Content-Type', false)
 
 Globally set `Authorization` header to all subsequent requests.
 
-:::tip Note
+<alert type="tip">
+
 This is a global method, you only have to call it once after which all future requests will include the token
-:::
+
+</alert>
 
 Parameters:
 
@@ -118,8 +129,7 @@ this.$http.setToken(false)
 
 If you need to create your own [ky instance](https://github.com/sindresorhus/ky#kycreatedefaultoptions) which based on `$http` defaults, you can use the `create(options)` method.
 
-```js
-// plugins/github.js
+```js{}[plugins/github.js]
 export default function ({ $http, env }, inject) {
   // Create a custom HTTP instance
   const $github = $http.create({

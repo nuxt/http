@@ -1,4 +1,9 @@
-# Usage
+---
+title: Usage
+description: 'How to use this module'
+position: 3
+category: Getting Started
+---
 
 ## Making Requests
 
@@ -58,9 +63,11 @@ async asyncData({ $http }) {
 
 ## Using in Component Methods
 
-:::warning Note
+<alert type="warning">
+
 `this` is not available in Nuxt's `asyncData` method, see [using in `asyncData`](#using-in-asyncdata) for how to use this module in `asyncData`
-:::
+
+</alert>
 
 When you have access to `this`, you can use `this.$http`:
 

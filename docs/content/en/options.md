@@ -1,4 +1,9 @@
-# Options
+---
+title: Options
+description: 'You can pass options using module options or http section in nuxt.config.js'
+position: 5
+category: API
+---
 
 You can pass options using module options or `http` section in `nuxt.config.js`
 
@@ -28,9 +33,11 @@ Base URL which is used and prepended to make requests in server side.
 
 Environment variable `API_URL` can be used to **override** `baseURL`.
 
-:::tip Note
+<alert type="tip">
+
 `baseURL` and `proxy` won't work together, you will need to use [`prefix`](/api/#prefix) instead
-:::
+
+</alert>
 
 ## `browserBaseURL`
 
@@ -77,11 +84,14 @@ You can easily integrate HTTP with [Proxy Module](https://github.com/nuxt-commun
 }
 ```
 
-:::tip Note
-It is not required to manually register `@nuxtjs/proxy` module, but it does need to be in your dependencies
-:::
+<alert type="tip">
 
-:::tip Note
+It is not required to manually register `@nuxtjs/proxy` module, but it does need to be in your dependencies
+
+</alert>
+
+<alert type="tip">
+
 `/api/` will be added to all requests to the API end point. If you need to remove it use `pathRewrite`:
 
 ```js
@@ -92,7 +102,8 @@ proxy: {
   }
 }
 ```
-:::
+
+</alert>
 
 ## `retry`
 
@@ -142,9 +153,11 @@ In SSR context, sets client request header as http default request headers.
 This is useful for making requests which need cookie based auth on server side.
 Also helps making consistent requests in both SSR and Client Side code.
 
-:::tip Note
+<alert type="tip">
+
 When directing requests at a url protected by CloudFlare's CDN you should set this to `false` to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
-:::
+
+</alert>
 
 ## `proxyHeadersIgnore`
 
@@ -158,10 +171,14 @@ Headers added to all requests. If provided, will be merged with the defaults.
 
 * Default: `{}`
 
-:::tip Note
-Do NOT include any credentials or tokens here. One can easily access them.
-:::
+<alert type="tip">
 
-:::tip Note
+Do NOT include any credentials or tokens here. One can easily access them.
+
+</alert>
+
+<alert type="tip">
+
 This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.
-:::
+
+</alert>

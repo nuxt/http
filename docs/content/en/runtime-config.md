@@ -1,4 +1,9 @@
-# Runtime Config
+---
+title: Runtime Config
+description: 'The use of runtime config is mandatory in case of using environment variables in production.'
+position: 6
+category: API
+---
 
 The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production. Otherwise, the values will be hard coded during build and won't change until the next build.
 

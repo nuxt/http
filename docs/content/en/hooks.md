@@ -1,4 +1,9 @@
-# Hooks
+---
+title: Hooks
+description: 'Hooks with arguments.'
+position: 8
+category: API
+---
 
 The `arguments` listed below are those your hook will receive when it's called.
 
