@@ -25,4 +25,4 @@ Starting from [v2.5.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.5.0), Nux
 ## Links
 
 * [ky](https://github.com/sindresorhus/ky)
-* [`BaseURL`](/api/#baseurl)
+* [`BaseURL`](/options#baseurl)
