@@ -58,6 +58,7 @@ async asyncData({ $http }) {
 async asyncData({ $http }) {
   const users = await $http.$get('https://reqres.in/api/users')
   return { users }
+}
 ```
 
 
