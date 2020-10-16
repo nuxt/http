@@ -25,8 +25,8 @@ npm install @nuxt/http
 
 Add a `http` object to your **nuxt.config.js** to configure global options which will be applied to all requests
 
-```js
-module.exports = {
+```js{}[nuxt.config.js]
+export default {
   modules: [
     '@nuxt/http',
   ],
