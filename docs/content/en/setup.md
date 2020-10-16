@@ -37,7 +37,7 @@ module.exports = {
 }
 ```
 
-See [http's options](/api/#options).
+See [http's options](/options).
 
 <alert type="warning">
 

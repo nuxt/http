@@ -35,7 +35,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 <alert type="tip">
 
-`baseURL` and `proxy` won't work together, you will need to use [`prefix`](/api/#prefix) instead
+`baseURL` and `proxy` won't work together, you will need to use [`prefix`](/options#prefix) instead
 
 </alert>
 

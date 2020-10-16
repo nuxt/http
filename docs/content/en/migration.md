@@ -15,12 +15,12 @@ The nuxt-community axios module is still supported and maintained. The HTTP modu
 
 ## Differences
 
-- There is no scope for [`setHeader`](/api/#setheader), [`setToken`](/api/#settoken)<br/>
+- There is no scope for [`setHeader`](/helpers#setheader), [`setToken`](/helpers#settoken)<br/>
 _When calling these methods they apply to the global scope and are used for all future requests_
 - The axios hooks `onRequestError` and `onResponseError` are unified<br/>
-_Use the [`onError`](/api/#onerror) hook instead_
+_Use the [`onError`](/hooks#onerror) hook instead_
 - The http module does not have a `debug` option like the axios module<br/>
-_You can setup a basic logger using the [`onRequest`](/api/#onrequest) hook_
+_You can setup a basic logger using the [`onRequest`](/hooks#onrequest) hook_
 - Progress bar integration is not supported (for the moment)<br/>
 _This option may be added again once [`PR #34: Add 'onProgress' option`](https://github.com/sindresorhus/ky/pull/34) for ky is merged_
 

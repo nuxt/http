@@ -7,7 +7,7 @@ category: Getting Started
 
 ## Making Requests
 
-See the [API reference](/api/#http-methods) for a list of available HTTP methods
+See the [API reference](/http-methods) for a list of available HTTP methods
 
 Calling a HTTP methods returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
 
