@@ -9,7 +9,7 @@ category: Getting Started
 
 Hooks can be used to globally intercept HTTP request and responses. E.g. if you wish to log errors, display a toast on error or need to dynamically modify requests.
 
-See the [API reference](/api/#hooks) for the list of lifecycle hooks the HTTP module provides
+See the [API reference](/hooks) for the list of lifecycle hooks the HTTP module provides
 
 These functions don't have to return anything by default.
 
