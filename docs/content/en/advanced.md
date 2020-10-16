@@ -17,23 +17,15 @@ These functions don't have to return anything by default.
 
 For registering hooks, you have to create a nuxt plugin:
 
-**nuxt.config.js**
-
-```js
-{
-  modules: [
-    '@nuxt/http',
-  ],
-
+```js{}[nuxt.config.js]
+export default {
   plugins: [
     '~/plugins/http'
   ]
 }
 ```
 
-**plugins/http.js**
-
-```js
+```js{}[plugins/http.js]
 import ky from 'ky-universal'
 
 export default function ({ $http }) {
