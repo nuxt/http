@@ -11,13 +11,13 @@ The `arguments` listed below are those your hook will receive when it's called.
 
 - arguments: `(config)`
 
-See [here](/guide/advanced.html#hooks) for usage.
+See [here](/advanced#hooks) for usage.
 
 ## `onResponse`
 
 - arguments: `(response)`
 
-See [here](/guide/advanced.html#hooks) for usage.
+See [here](/advanced#hooks) for usage.
 
 ## `onError`
 
@@ -32,4 +32,4 @@ Available properties:
 
 You can optionally return a value or promise that can resolve for fallback response. If hook returns any value, other hooks **won't** be called.
 
-See [here](/guide/advanced.html#hooks) for usage.
+See [here](/advanced#hooks) for usage.
