@@ -38,7 +38,7 @@ if (process.server) {
 
 Globally set a header to all subsequent requests
 
-See [here](/guide/advanced.html#header-helpers) for usage.
+See [here](/advanced#header-helpers) for usage.
 
 ## `setToken`
 
@@ -46,7 +46,7 @@ See [here](/guide/advanced.html#header-helpers) for usage.
 
 Globally set a `Authorization` header for all subsequent requests.
 
-See [here](/guide/advanced.html#settoken-token-type) for usage.
+See [here](/advanced#settokentoken-type) for usage.
 
 ## `create`
 
