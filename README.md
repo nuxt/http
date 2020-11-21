@@ -29,6 +29,13 @@
 1. Clone this repository
 2. Install dependencies using `yarn install`
 3. Start development server using `yarn dev`
+4. Then go for instance to `http://localhost:3000/mounted`
+
+## 📖 Contribute to the documentation 
+
+1. Go into the docs folder
+2. Install dependencies using `yarn install`
+3. Start development server using `yarn dev`
 
 ## 📑 License
 
