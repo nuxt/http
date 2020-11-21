@@ -5,13 +5,13 @@ position: 9
 category: API
 ---
 
-<alert type="tip">
+<alert type="info">
 
-See [here](/guide/usage.html#making-requests) for usage information for below methods.
+See [here](/usage#making-requests) for usage information for below methods.
 
 </alert>
 
-<alert type="tip">
+<alert type="info">
 
 Each http method returns a `Promise`
 

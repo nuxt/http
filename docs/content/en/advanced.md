@@ -61,7 +61,7 @@ This method should probably not be called inside hooks as it is global and will 
 
 </alert>
 
-<alert type="tip">
+<alert type="info">
 
 Please note that HTTP headers are case-insensitive. Therefore all header names will be converted to lower-case to make sure that if you set the same header twice but with different casing the last one set will be used.
 
@@ -92,7 +92,7 @@ this.$http.setHeader('Content-Type', false)
 
 Globally set `Authorization` header to all subsequent requests.
 
-<alert type="tip">
+<alert type="info">
 
 This is a global method, you only have to call it once after which all future requests will include the token
 

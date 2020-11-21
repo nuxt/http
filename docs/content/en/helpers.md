@@ -5,7 +5,7 @@ position: 7
 category: API
 --- 
 
-<alert type="tip">
+<alert type="info">
 
 Helpers available on `$http` instance.
 
@@ -52,4 +52,4 @@ See [here](/advanced#settokentoken-type) for usage.
 
 - arguments: `(kyOptions)`
 
-Create a new KY instance based on defaults, see [create new instance based on defaults](/guide/advanced.html#create-new-instance-based-on-defaults) for usage.
+Create a new KY instance based on defaults, see [create new instance based on defaults](/advanced#create-new-instance-based-on-defaults) for usage.
