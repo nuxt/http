@@ -26,7 +26,7 @@ Each http method returns a `Promise`
 
 **Example: **
 ```js
-const jsonResponse = await this.$http.$head('https://unpkg.com/nuxt/package.json')
+const jsonResponse = await $http.$head('https://unpkg.com/nuxt/package.json')
 ```
 
 ### `$get`
@@ -38,12 +38,12 @@ const jsonResponse = await this.$http.$head('https://unpkg.com/nuxt/package.json
 
 **Examples: **
 ```js
-const jsonResponse = await this.$http.$get('https://unpkg.com/nuxt/package.json')
+const jsonResponse = await $http.$get('https://unpkg.com/nuxt/package.json')
 ```
 
 ```js
 // With prefixUrl option to call `https://example.com/items`
-const jsonResponse = await this.$http.$get('items', { prefixUrl: 'https://example.com' })
+const jsonResponse = await $http.$get('items', { prefixUrl: 'https://example.com' })
 ```
 
 ### `$post`
@@ -56,12 +56,12 @@ const jsonResponse = await this.$http.$get('items', { prefixUrl: 'https://exampl
 
 **Examples: **
 ```js
-const jsonResponse = await this.$http.$post('http://api.com', { foo: 'bar' })
+const jsonResponse = await $http.$post('http://api.com', { foo: 'bar' })
 ```
 
 ```js
 // With some additional options
-const jsonResponse = await this.$http.$post('http://api.com', { foo: 'bar' }, {
+const jsonResponse = await $http.$post('http://api.com', { foo: 'bar' }, {
   debug: true,
   retry: 2,
   serverTimeout: 5000
@@ -78,12 +78,12 @@ const jsonResponse = await this.$http.$post('http://api.com', { foo: 'bar' }, {
 
 **Examples: **
 ```js
-const jsonResponse = await this.$http.$put('http://api.com/{id}', { foo: 'bar' })
+const jsonResponse = await $http.$put('http://api.com/{id}', { foo: 'bar' })
 ```
 
 ```js
 // With some additional option
-const jsonResponse = await this.$http.$put('http://api.com/{id}', { foo: 'bar' }, {
+const jsonResponse = await $http.$put('http://api.com/{id}', { foo: 'bar' }, {
   clientTimeout: 5000
 })
 ```
@@ -98,12 +98,12 @@ const jsonResponse = await this.$http.$put('http://api.com/{id}', { foo: 'bar' }
 **Example: **
 
 ```js
-await this.$http.$delete('https://api.example.com/item/{id}')
+await $http.$delete('https://api.example.com/item/{id}')
 ```
 
 ```js
 // With some options to call `https://example.com/api/item`
-const jsonResponse = await this.$http.$delete('item/{id}', { 
+const jsonResponse = await $http.$delete('item/{id}', { 
   baseUrl: 'https://example.com',
   prefixUrl: '/api' 
 })
@@ -119,12 +119,12 @@ const jsonResponse = await this.$http.$delete('item/{id}', {
 
 **Examples: **
 ```js
-const jsonResponse = await this.$http.$patch('http://api.com/{id}', { foo: 'bar' })
+const jsonResponse = await $http.$patch('http://api.com/{id}', { foo: 'bar' })
 ```
 
 ```js
 // With some additional option
-const jsonResponse = await this.$http.$patch('http://api.com/{id}', { foo: 'bar' }, {
+const jsonResponse = await $http.$patch('http://api.com/{id}', { foo: 'bar' }, {
   proxyHeaders: true,
   proxyHeadersIgnore: ['content-type']
 })
@@ -139,7 +139,7 @@ const jsonResponse = await this.$http.$patch('http://api.com/{id}', { foo: 'bar'
 
 **Example: **
 ```js
-await this.$http.head('https://unpkg.com/nuxt/package.json')
+await $http.head('https://unpkg.com/nuxt/package.json')
 ```
 
 See [`here`](/usage#making-requests) to convert response stream into usable data.
@@ -155,13 +155,13 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 
 **Examples: **
 ```js
-const response = await this.$http.get('https://unpkg.com/nuxt/package.json')
+const response = await $http.get('https://unpkg.com/nuxt/package.json')
 const jsonResponse = await response.json() 
 ```
 
 ```js
 // With prefixUrl option to call `https://example.com/items`
-const response = await this.$http.get('items', { prefixUrl: 'https://example.com' })
+const response = await $http.get('items', { prefixUrl: 'https://example.com' })
 const textResponse = await response.text()
 ```
 
@@ -179,13 +179,13 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 
 **Examples: **
 ```js
-const response = await this.$http.post('http://api.com', { foo: 'bar' })
+const response = await $http.post('http://api.com', { foo: 'bar' })
 const jsonResponse = await response.json() 
 ```
 
 ```js
 // With some additional options
-const response = await this.$http.post('http://api.com', { foo: 'bar' }, {
+const response = await $http.post('http://api.com', { foo: 'bar' }, {
   debug: true,
   retry: 2,
   serverTimeout: 5000
@@ -207,13 +207,13 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 
 **Examples: **
 ```js
-const response = await this.$http.put('http://api.com/{id}', { foo: 'bar' })
+const response = await $http.put('http://api.com/{id}', { foo: 'bar' })
 const jsonResponse = await response.json()
 ```
 
 ```js
 // With some additional option
-const response = await this.$http.put('http://api.com/{id}', { foo: 'bar' }, {
+const response = await $http.put('http://api.com/{id}', { foo: 'bar' }, {
   clientTimeout: 5000
 })
 const jsonResponse = await response.json()
@@ -233,12 +233,12 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 **Example: **
 
 ```js
-await this.$http.delete('https://api.example.com/item/{id}')
+await $http.delete('https://api.example.com/item/{id}')
 ```
 
 ```js
 // With some options to call `https://example.com/api/item`
-const response = await this.$http.delete('item/{id}', { 
+const response = await $http.delete('item/{id}', { 
   baseUrl: 'https://example.com',
   prefixUrl: '/api' 
 })
@@ -258,13 +258,13 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 
 **Examples: **
 ```js
-const response = await this.$http.patch('http://api.com/{id}', { foo: 'bar' })
+const response = await $http.patch('http://api.com/{id}', { foo: 'bar' })
 const jsonResponse = await response.json()
 ```
 
 ```js
 // With some additional option
-const response = await this.$http.patch('http://api.com/{id}', { foo: 'bar' }, {
+const response = await $http.patch('http://api.com/{id}', { foo: 'bar' }, {
   proxyHeaders: true,
   proxyHeadersIgnore: ['content-type']
 })

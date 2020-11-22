@@ -24,20 +24,22 @@ See [ky](https://github.com/sindresorhus/ky#options) docs for all available opti
 **Example: GET JSON data**
 
 ```js
-const res = await $http.get('https://unpkg.com/nuxt/package.json')
-const data = await res.json()
+const data = await $http.$get('https://unpkg.com/nuxt/package.json')
 ```
 
-Alternatively for json only you can use `$` prefixed shortcut that smartly parses response using [destr](https://github.com/nuxt-contrib/destr).
+In most of the case, you want to get the JSON response. You can use `$` prefixed shortcut that smartly parses response using [destr](https://github.com/nuxt-contrib/destr).
 
+
+Alternatively for other response type, you can use the methods mentioned above :
 ```js
-await $http.$get('https://unpkg.com/nuxt/package.json')
+const res = await $http.get('https://unpkg.com/nuxt/package.json')
+const responseText = await res.text()
 ```
 
 **Example: POST with JSON body**
 
 ```js
-await $http.post('http://api.com', { foo: 'bar' })
+const data = await $http.$post('http://api.com', { foo: 'bar' })
 ```
 
 ## Using in `asyncData`
