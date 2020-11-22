@@ -15,7 +15,7 @@ export default {
 
   async mounted() {
     // Simple request to get data and parse it to json
-    const response = await this.$http.get('https://unpkg.com/nuxt/package.json')
+    const response = await this.$http.get('foo/bar')
     this.res = await response.json()
   }
 }

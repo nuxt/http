@@ -30,6 +30,12 @@ describe('module', () => {
     expect(html).toContain('foo/bar')
   })
 
+  test('index', async () => {
+    const page = await browser.page(url('/'))
+    const html = await page.getHtml()
+    expect(html).toContain('foo/bar')
+  })
+
   test('defaults', async () => {
     const page = await browser.page(url('/mounted'))
     const defaults = await page.runScript(() => window.$nuxt.$http._defaults)
