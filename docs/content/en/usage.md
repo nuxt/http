@@ -9,7 +9,7 @@ category: Getting Started
 
 See the [API reference](/http-methods) for a list of available HTTP methods
 
-Calling a HTTP methods returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
+Calling a HTTP methods returns a Promise that resolves to a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
 
 You can use methods to convert response stream into usable data:
 
@@ -37,7 +37,7 @@ await $http.$get('https://unpkg.com/nuxt/package.json')
 **Example: POST with JSON body**
 
 ```js
-await $http.post('http://api.con', { foo: 'bar' })
+await $http.post('http://api.com', { foo: 'bar' })
 ```
 
 ## Using in `asyncData`
