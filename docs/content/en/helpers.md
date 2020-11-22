@@ -38,6 +38,12 @@ if (process.server) {
 
 Globally set a header to all subsequent requests
 
+**Example: **
+```js
+// Add header `Content-Type: application/json`
+this.$http.setHeader('Content-Type', 'application/json')
+```
+
 See [here](/advanced#header-helpers) for usage.
 
 ## `setToken`
@@ -45,6 +51,11 @@ See [here](/advanced#header-helpers) for usage.
 - arguments: `(token, type)`
 
 Globally set a `Authorization` header for all subsequent requests.
+
+```js
+// Adds header: `Authorization: Bearer 123` to all requests
+this.$http.setToken('123', 'Bearer')
+```
 
 See [here](/advanced#settokentoken-type) for usage.
 

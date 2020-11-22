@@ -11,19 +11,57 @@ The `arguments` listed below are those your hook will receive when it's called.
 
 - arguments: `(config)`
 
-See [here](/advanced#hooks) for usage.
+**Example: **
+```js{}[plugins/http.js]
+import ky from 'ky-universal'
+
+export default function ({ $http }) {
+  $http.onRequest(config => {
+    console.log('Making request to ' + config.url)
+  })
+}
+```
+
+See [here](/advanced#hooks) for advanced usage.
 
 ## `onResponse`
 
 - arguments: `(response)`
 
-See [here](/advanced#hooks) for usage.
+**Example: **
+```js{}[plugins/http.js]
+import ky from 'ky-universal'
+
+export default function ({ $http }) {
+  $http.onResponse((req, options, res) => {
+    console.log('Making request to ' + config.url)
+    console.log('Options :', options)
+    console.log('Response data :', res.body)
+  })
+}
+```
+
+See [here](/advanced#hooks) for advanced usage.
 
 ## `onError`
 
 - arguments: `(error)`
 
 If the error originated from a request.
+
+**Example: **
+```js{}[plugins/http.js]
+import ky from 'ky-universal'
+
+export default function ({ $http, redirect }) {
+  $http.onError((err) => {
+    // In case of unauthorized, redirect to a specific page
+    if (error.statusCode === 401) {
+      redirect('/401')
+    }
+  })
+}
+```
 
 Available properties:
 
@@ -32,4 +70,4 @@ Available properties:
 
 You can optionally return a value or promise that can resolve for fallback response. If hook returns any value, other hooks **won't** be called.
 
-See [here](/advanced#hooks) for usage.
+See [here](/advanced#hooks) for advanced usage.
