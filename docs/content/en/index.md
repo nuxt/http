@@ -3,7 +3,6 @@ title: Introduction
 description: 'HTTP module for Nuxt.js provides a universal way to make HTTP requests to the API backend.'
 position: 1
 category: ''
-menuTitle: 'Intro'
 features:
   - The fluent ky API has been extended with enhancements and shortcuts
   - Highly customizable options support for `BaseURL`
@@ -12,14 +11,16 @@ features:
   - Easy proxy support to avoid CORS problems and making deployment easier
 ---
 
-<img src="/preview.png" class="light-img" />
-<img src="/preview-dark.png" class="dark-img" />
+<img src="/preview.png" class="light-img shadow rounded-md hover:shadow-lg transition-shadow duration-200" />
+<img src="/preview-dark.png" class="dark-img shadow rounded-md hover:shadow-lg transition-shadow duration-200" />
 
-HTTP module for Nuxt.js provides a universal way to make HTTP requests to the API backend.
+The HTTP module for [Nuxt](https://nuxtjs.org) provides a universal way to make HTTP requests to any API.
 
-This module is an alternative to [Axios Module](https://github.com/nuxt-community/axios-module). Behind the scenes it use [ky-universal](https://github.com/sindresorhus/ky-universal) and [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to make HTTP requests. Please see the [migration guide](./migration) if you are currently using axios module and wish to migrate.
+It uses [ky-universal](https://github.com/sindresorhus/ky-universal) and [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to make HTTP requests. Please see the [migration guide](./migration) if you are currently using axios module and wish to migrate.
 
-Starting from [v2.5.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.5.0), Nuxt.js has built-in support for universal fetch. However, this module provides several advantages:
+Starting from [v2.5.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.5.0), Nuxt.js has built-in support for universal fetch. However, this module provides several advantages.
+
+> This module is an alternative to the [Axios module](https://axios.nuxtjs.org).
 
 ## Features
 
