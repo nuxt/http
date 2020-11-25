@@ -13,8 +13,6 @@ The `arguments` listed below are those your hook will receive when it's called.
 
 **Example: **
 ```js{}[plugins/http.js]
-import ky from 'ky-universal'
-
 export default function ({ $http }) {
   $http.onRequest(config => {
     console.log('Making request to ' + config.url)
@@ -30,11 +28,9 @@ See [here](/advanced#hooks) for advanced usage.
 
 **Example: **
 ```js{}[plugins/http.js]
-import ky from 'ky-universal'
-
 export default function ({ $http }) {
   $http.onResponse((req, options, res) => {
-    console.log('Making request to ' + config.url)
+    console.log('Making request to ' + req.url)
     console.log('Options :', options)
     console.log('Response data :', res.body)
   })
@@ -51,8 +47,6 @@ If the error originated from a request.
 
 **Example: **
 ```js{}[plugins/http.js]
-import ky from 'ky-universal'
-
 export default function ({ $http, redirect }) {
   $http.onError((err) => {
     // In case of unauthorized, redirect to a specific page
