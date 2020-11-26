@@ -12,11 +12,10 @@ Each http method returns a `Promise`
 </alert>
 
 ### `$get`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String 
 - rejects: `Error`
 
 **Examples:**
@@ -31,12 +30,11 @@ const items = await $http.$get('items', { prefixUrl: 'https://example.com' })
 ```
 
 ### `$post`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Examples:**
@@ -55,12 +53,11 @@ const data = await $http.$post('http://api.com', { foo: 'bar' }, {
 ```
 
 ### `$put`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Examples:**
@@ -77,11 +74,10 @@ const data = await $http.$put('http://api.com/{id}', { foo: 'bar' }, {
 ```
 
 ### `$delete`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Example:**
@@ -99,12 +95,11 @@ const jsonResponse = await $http.$delete('item/{id}', {
 ```
 
 ### `$patch`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Examples: **
@@ -122,11 +117,10 @@ const data = await $http.$patch('http://api.com/{id}', { foo: 'bar' }, {
 ```
 
 ### `$head`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Example: **
@@ -135,7 +129,6 @@ const data = await $http.$patch('http://api.com/{id}', { foo: 'bar' }, {
 await $http.$head('https://unpkg.com/nuxt/package.json')
 ```
 ### `get`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
@@ -160,7 +153,6 @@ See [`here`](/usage#making-requests) to convert response stream into usable data
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `post`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
@@ -190,7 +182,6 @@ See [`here`](/usage#making-requests) to convert response stream into usable data
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `put`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
@@ -218,7 +209,6 @@ See [`here`](/usage#making-requests) to convert response stream into usable data
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `delete`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
@@ -244,7 +234,6 @@ See [`here`](/usage#making-requests) to convert response stream into usable data
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `patch`
-
 - arguments: `(url, body?, options?)`
   - url: `String`
   - body: `Object`
@@ -273,7 +262,6 @@ See [`here`](/usage#making-requests) to convert response stream into usable data
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `head`
-
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)

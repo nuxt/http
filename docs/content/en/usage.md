@@ -33,9 +33,37 @@ In most of the case, you want to get the JSON response. You can use `$` prefixed
 
 Alternatively for other response type, you can use the methods mentioned above:
 
+**Example: GET data as `text`**
 ```js
 const res = await $http.get('https://unpkg.com/nuxt/package.json')
 const responseText = await res.text()
+```
+
+**Example: GET data as `arrayBuffer`**
+```js
+const response = await this.$http.get('https://nuxtjs.org/logos/nuxt.svg')
+const buffer = await response.arrayBuffer()
+console.log('buffer.byteLength = ', buffer.byteLength)
+```
+
+**Example: GET data as `readable stream`**
+```js
+const response = await this.$http.get('https://example.org')
+const reader = response.body.getReader()
+
+let result = ''
+reader.read().then(function process ({ done, value }) {
+  if (done) {
+    console.log('Stream complete result =>', result)
+    return
+  }
+
+  const decoder = new TextDecoder('utf-8')
+  result += decoder.decode(value, { stream: true })
+
+  // Read some more, and call this function again
+  return reader.read().then(process)
+})
 ```
 
 **Example: POST with JSON body**
