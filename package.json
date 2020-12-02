@@ -23,7 +23,7 @@
     "abort-controller": "^3.0.0",
     "consola": "^2.15.0",
     "destr": "^1.0.1",
-    "ky": "^0.24.0",
+    "ky": "^0.25.0",
     "node-fetch": "^2.6.1",
     "web-streams-polyfill": "^3.0.1"
   },
