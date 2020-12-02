@@ -7,7 +7,7 @@ category: Migration
 
 This guide will help you to migrate from [Axios Module](https://github.com/nuxt-community/axios-module).
 
-<alert type="tip">
+<alert type="info">
 
 The nuxt-community axios module is still supported and maintained. The HTTP module uses newer web technologies like fetch which might be beneficial
 
@@ -22,7 +22,7 @@ _Use the [`onError`](/hooks#onerror) hook instead_
 - The http module does not have a `debug` option like the axios module<br/>
 _You can setup a basic logger using the [`onRequest`](/hooks#onrequest) hook_
 - Progress bar integration is not supported (for the moment)<br/>
-_This option may be added again once [`PR #34: Add 'onProgress' option`](https://github.com/sindresorhus/ky/pull/34) for ky is merged_
+_This option may be added again once [`PR #105 : progress bar`](https://github.com/nuxt/http/pull/105) is merged_
 
 ## Response body parsing
 

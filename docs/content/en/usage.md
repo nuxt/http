@@ -7,12 +7,11 @@ category: Getting Started
 
 ## Making Requests
 
-See the [API reference](/http-methods) for a list of available HTTP methods
+See the list of [available HTTP methods](/http-methods).
 
-Calling a HTTP methods returns a Promise that resolves to a [Reponse](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
+Calling a HTTP methods returns a `Promise` that resolves to a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object or rejects in case of network errors.
 
 You can use methods to convert response stream into usable data:
-
 - `json`
 - `text`
 - `formData`
@@ -24,20 +23,53 @@ See [ky](https://github.com/sindresorhus/ky#options) docs for all available opti
 **Example: GET JSON data**
 
 ```js
-const res = await $http.get('https://unpkg.com/nuxt/package.json')
-const data = await res.json()
+const package = await $http.$get('https://unpkg.com/nuxt/package.json')
+
+console.log(package.name) // log "nuxt"
 ```
 
-Alternatively for json only you can use `$` prefixed shortcut that smartly parses response using [destr](https://github.com/nuxt-contrib/destr).
+In most of the case, you want to get the JSON response. You can use `$` prefixed shortcut that smartly parses response using [destr](https://github.com/nuxt-contrib/destr).
 
+
+Alternatively for other response type, you can use the methods mentioned above:
+
+**Example: GET data as `text`**
 ```js
-await $http.$get('https://unpkg.com/nuxt/package.json')
+const res = await $http.get('https://unpkg.com/nuxt/package.json')
+const responseText = await res.text()
+```
+
+**Example: GET data as `arrayBuffer`**
+```js
+const response = await this.$http.get('https://nuxtjs.org/logos/nuxt.svg')
+const buffer = await response.arrayBuffer()
+console.log('buffer.byteLength = ', buffer.byteLength)
+```
+
+**Example: GET data as `readable stream`**
+```js
+const response = await this.$http.get('https://example.org')
+const reader = response.body.getReader()
+
+let result = ''
+reader.read().then(function process ({ done, value }) {
+  if (done) {
+    console.log('Stream complete result =>', result)
+    return
+  }
+
+  const decoder = new TextDecoder('utf-8')
+  result += decoder.decode(value, { stream: true })
+
+  // Read some more, and call this function again
+  return reader.read().then(process)
+})
 ```
 
 **Example: POST with JSON body**
 
 ```js
-await $http.post('http://api.con', { foo: 'bar' })
+const data = await $http.$post('http://api.com', { foo: 'bar' })
 ```
 
 ## Using in `asyncData`
@@ -46,41 +78,40 @@ For `asyncData` and `fetch` you can access instance from context:
 
 ```js
 async asyncData({ $http }) {
-  const res = await $http.get('http://icanhazip.com')
+  const res = await $http.get('https://icanhazip.com')
   const ip = await res.text()
+
   return { ip }
 }
 ```
 
-**Example: GET JSON data using prefixed**
+**Example: GET JSON data using $ helper**
 
 ```js
 async asyncData({ $http }) {
   const users = await $http.$get('https://reqres.in/api/users')
+
   return { users }
 }
 ```
 
-
 ## Using in Component Methods
-
-<alert type="warning">
-
-`this` is not available in Nuxt's `asyncData` method, see [using in `asyncData`](#using-in-asyncdata) for how to use this module in `asyncData`
-
-</alert>
 
 When you have access to `this`, you can use `this.$http`:
 
 ```js
 methods: {
   async fetchSomething() {
-    const res = await this.$http.get('http://icanhazip.com')
-    const ip = await res.text()
-    this.ip = ip
+    this.ip = await this.$http.$get('https://icanhazip.com')
   }
 }
 ```
+
+<alert type="info">
+
+`this` is not available in Nuxt's `asyncData` method, see [using in `asyncData`](#using-in-asyncdata) for how to use this module in `asyncData`
+
+</alert>
 
 ## Using in Store
 
@@ -91,8 +122,8 @@ For store actions you can also use `this.$http`:
 {
   actions: {
     async getIP ({ commit }) {
-      const res = await this.$http.get('http://icanhazip.com')
-      const ip = await res.text()
+      const ip = await this.$http.$get('https://icanhazip.com')
+
       commit('SET_IP', ip)
     }
   }

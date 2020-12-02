@@ -5,21 +5,42 @@ position: 2
 category: Getting Started
 ---
 
-Check the [Nuxt.js documentation](https://nuxtjs.org/api/configuration-modules#the-modules-property) for more information about installing and using modules in Nuxt.js
+Checkout the [Nuxt documentation](https://nuxtjs.org/api/configuration-modules#the-modules-property) for more information about installing and using modules.
 
 ## Install
 
-Install with yarn:
+Add `@nuxt/http` dependency to your project:
 
-```bash
-yarn add @nuxt/http
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  yarn add @nuxt/http
+  ```
+
+  </code-block>
+  <code-block label="NPM">
+
+  ```bash
+  npm install @nuxt/http
+  ```
+
+  </code-block>
+</code-group>
+
+Then add it to the modules section in your `nuxt.config.js`:
+
+```js{}[nuxt.config.js]
+export default {
+  modules: ['@nuxt/http']
+}
 ```
 
-Install with npm:
+<alert type="success">
 
-```bash
-npm install @nuxt/http
-```
+That's it! You can now use [$http](/usage) in your Nuxt app ✨
+
+</alert>
 
 ## Configure
 

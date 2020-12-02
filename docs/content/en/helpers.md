@@ -5,7 +5,7 @@ position: 7
 category: API
 --- 
 
-<alert type="tip">
+<alert type="info">
 
 Helpers available on `$http` instance.
 
@@ -38,6 +38,12 @@ if (process.server) {
 
 Globally set a header to all subsequent requests
 
+**Example: **
+```js
+// Add header `Content-Type: application/json`
+this.$http.setHeader('Content-Type', 'application/json')
+```
+
 See [here](/advanced#header-helpers) for usage.
 
 ## `setToken`
@@ -46,10 +52,15 @@ See [here](/advanced#header-helpers) for usage.
 
 Globally set a `Authorization` header for all subsequent requests.
 
+```js
+// Adds header: `Authorization: Bearer 123` to all requests
+this.$http.setToken('123', 'Bearer')
+```
+
 See [here](/advanced#settokentoken-type) for usage.
 
 ## `create`
 
 - arguments: `(kyOptions)`
 
-Create a new KY instance based on defaults, see [create new instance based on defaults](/guide/advanced.html#create-new-instance-based-on-defaults) for usage.
+Create a new KY instance based on defaults, see [create new instance based on defaults](/advanced#create-new-instance-based-on-defaults) for usage.

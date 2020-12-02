@@ -1,58 +1,272 @@
 ---
 title: HTTP Methods
 description: 'HTTP Methods'
-position: 9
-category: API
+position: 4
+category: Getting Started
 ---
 
-<alert type="tip">
-
-See [here](/guide/usage.html#making-requests) for usage information for below methods.
-
-</alert>
-
-<alert type="tip">
+<alert type="info">
 
 Each http method returns a `Promise`
 
 </alert>
 
-### `delete`
-### `get`
-### `head`
-
+### `$get`
 - arguments: `(url, options?)`
+  - url: `String`
+  - options: [options](/options)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- rejects: `Error`
+
+**Examples:**
+
+```js
+const package = await $http.$get('https://unpkg.com/nuxt/package.json')
+```
+
+```js
+// With prefixUrl option to call `https://example.com/items`
+const items = await $http.$get('items', { prefixUrl: 'https://example.com' })
+```
+
+### `$post`
+- arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- rejects: `Error`
+
+**Examples:**
+
+```js
+const data = await $http.$post('http://api.com', { foo: 'bar' })
+```
+
+```js
+// With some additional options
+const data = await $http.$post('http://api.com', { foo: 'bar' }, {
+  debug: true,
+  retry: 2,
+  serverTimeout: 5000
+})
+```
+
+### `$put`
+- arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- rejects: `Error`
+
+**Examples:**
+
+```js
+const data = await $http.$put('http://api.com/{id}', { foo: 'bar' })
+```
+
+```js
+// With some additional option
+const data = await $http.$put('http://api.com/{id}', { foo: 'bar' }, {
+  clientTimeout: 5000
+})
+```
+
+### `$delete`
+- arguments: `(url, options?)`
+  - url: `String`
+  - options: [options](/options)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- rejects: `Error`
+
+**Example:**
+
+```js
+await $http.$delete('https://api.example.com/item/{id}')
+```
+
+```js
+// With some options to call `https://example.com/api/item`
+const jsonResponse = await $http.$delete('item/{id}', {
+  baseUrl: 'https://example.com',
+  prefixUrl: '/api'
+})
+```
+
+### `$patch`
+- arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- rejects: `Error`
+
+**Examples: **
+
+```js
+const data = await $http.$patch('http://api.com/{id}', { foo: 'bar' })
+```
+
+```js
+// With some additional option
+const data = await $http.$patch('http://api.com/{id}', { foo: 'bar' }, {
+  proxyHeaders: true,
+  proxyHeadersIgnore: ['content-type']
+})
+```
+
+### `$head`
+- arguments: `(url, options?)`
+  - url: `String`
+  - options: [options](/options)
+- resolves: -
+- rejects: `Error`
+
+### `get`
+- arguments: `(url, options?)`
+  - url: `String`
+  - options: [options](/options)
 - resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 - rejects: `Error`
+
+**Examples:**
+
+```js
+const response = await $http.get('https://unpkg.com/nuxt/package.json')
+const jsonResponse = await response.json()
+```
+
+```js
+// With prefixUrl option to call `https://example.com/items`
+const response = await $http.get('items', { prefixUrl: 'https://example.com' })
+const textResponse = await response.text()
+```
+
+See [`here`](/usage#making-requests) to convert response stream into usable data.
+
+These methods corresponds to the similar named HTTP/1.1 methods.
+
+### `post`
+- arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
+- resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+- rejects: `Error`
+
+**Examples: **
+
+```js
+const response = await $http.post('http://api.com', { foo: 'bar' })
+const jsonResponse = await response.json()
+```
+
+```js
+// With some additional options
+const response = await $http.post('http://api.com', { foo: 'bar' }, {
+  debug: true,
+  retry: 2,
+  serverTimeout: 5000
+})
+const jsonResponse = await response.json()
+```
+
+See [`here`](/usage#making-requests) to convert response stream into usable data.
+
+These methods corresponds to the similar named HTTP/1.1 methods.
+
+### `put`
+- arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
+- resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+- rejects: `Error`
+
+**Examples:**
+
+```js
+const response = await $http.put('http://api.com/{id}', { foo: 'bar' })
+const jsonResponse = await response.json()
+```
+
+```js
+// With some additional option
+const response = await $http.put('http://api.com/{id}', { foo: 'bar' }, {
+  clientTimeout: 5000
+})
+const jsonResponse = await response.json()
+```
+
+See [`here`](/usage#making-requests) to convert response stream into usable data.
+
+These methods corresponds to the similar named HTTP/1.1 methods.
+
+### `delete`
+- arguments: `(url, options?)`
+  - url: `String`
+  - options: [options](/options)
+- resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+- rejects: `Error`
+
+**Example:**
+
+```js
+await $http.delete('https://api.example.com/item/{id}')
+```
+
+```js
+// With some options to call `https://example.com/api/item`
+const response = await $http.delete('item/{id}', {
+  baseUrl: 'https://example.com',
+  prefixUrl: '/api'
+})
+```
+
+See [`here`](/usage#making-requests) to convert response stream into usable data.
 
 These methods corresponds to the similar named HTTP/1.1 methods.
 
 ### `patch`
-### `post`
-### `put`
-
 - arguments: `(url, body?, options?)`
+  - url: `String`
+  - body: `Object`
+  - options: [options](/options)
 - resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 - rejects: `Error`
 
+**Examples:**
+
+```js
+const response = await $http.patch('http://api.com/{id}', { foo: 'bar' })
+const jsonResponse = await response.json()
+```
+
+```js
+// With some additional option
+const response = await $http.patch('http://api.com/{id}', { foo: 'bar' }, {
+  proxyHeaders: true,
+  proxyHeadersIgnore: ['content-type']
+})
+const jsonResponse = await response.json()
+```
+
+See [`here`](/usage#making-requests) to convert response stream into usable data.
+
 These methods corresponds to the similar named HTTP/1.1 methods.
 
-### `$delete`
-### `$get`
-### `$head`
-
+### `head`
 - arguments: `(url, options?)`
-- resolves: `JSON`
+  - url: `String`
+  - options: [options](/options)
+- resolves: [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
 - rejects: `Error`
 
-These `$`-prefixed convenience methods always return the requested content as [`JSON`](https://developer.mozilla.org/en-US/docs/Web/API/Body/json).
+**Example:**
 
-### `$patch`
-### `$post`
-### `$put`
+```js
+await $http.head('https://unpkg.com/nuxt/package.json')
+```
 
-- arguments: `(url, body?, options?)`
-- resolves: `JSON`
-- rejects: `Error`
-
-These `$`-prefixed convenience methods always return the requested content as [`JSON`](https://developer.mozilla.org/en-US/docs/Web/API/Body/json).
+These methods corresponds to the similar named HTTP/1.1 methods.
