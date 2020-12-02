@@ -15,7 +15,7 @@ Each http method returns a `Promise`
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String 
+- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
 - rejects: `Error`
 
 **Examples:**
@@ -88,9 +88,9 @@ await $http.$delete('https://api.example.com/item/{id}')
 
 ```js
 // With some options to call `https://example.com/api/item`
-const jsonResponse = await $http.$delete('item/{id}', { 
+const jsonResponse = await $http.$delete('item/{id}', {
   baseUrl: 'https://example.com',
-  prefixUrl: '/api' 
+  prefixUrl: '/api'
 })
 ```
 
@@ -120,14 +120,9 @@ const data = await $http.$patch('http://api.com/{id}', { foo: 'bar' }, {
 - arguments: `(url, options?)`
   - url: `String`
   - options: [options](/options)
-- resolves: [JSON](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) if [destr](https://github.com/nuxt-contrib/destr) can convert automatically, otherwise fallback to String
+- resolves: -
 - rejects: `Error`
 
-**Example: **
-
-```js
-await $http.$head('https://unpkg.com/nuxt/package.json')
-```
 ### `get`
 - arguments: `(url, options?)`
   - url: `String`
@@ -139,7 +134,7 @@ await $http.$head('https://unpkg.com/nuxt/package.json')
 
 ```js
 const response = await $http.get('https://unpkg.com/nuxt/package.json')
-const jsonResponse = await response.json() 
+const jsonResponse = await response.json()
 ```
 
 ```js
@@ -164,7 +159,7 @@ These methods corresponds to the similar named HTTP/1.1 methods.
 
 ```js
 const response = await $http.post('http://api.com', { foo: 'bar' })
-const jsonResponse = await response.json() 
+const jsonResponse = await response.json()
 ```
 
 ```js
@@ -174,7 +169,7 @@ const response = await $http.post('http://api.com', { foo: 'bar' }, {
   retry: 2,
   serverTimeout: 5000
 })
-const jsonResponse = await response.json() 
+const jsonResponse = await response.json()
 ```
 
 See [`here`](/usage#making-requests) to convert response stream into usable data.
@@ -223,9 +218,9 @@ await $http.delete('https://api.example.com/item/{id}')
 
 ```js
 // With some options to call `https://example.com/api/item`
-const response = await $http.delete('item/{id}', { 
+const response = await $http.delete('item/{id}', {
   baseUrl: 'https://example.com',
-  prefixUrl: '/api' 
+  prefixUrl: '/api'
 })
 ```
 
