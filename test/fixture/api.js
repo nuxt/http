@@ -4,6 +4,7 @@ module.exports = {
     if (req.url === '/error') {
       res.statusCode = 418
       res.end('Detailed error message')
+      return
     }
 
     res.end(JSON.stringify({
