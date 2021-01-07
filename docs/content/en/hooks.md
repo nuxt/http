@@ -24,7 +24,7 @@ See [here](/advanced#hooks) for advanced usage.
 
 ## `onResponse`
 
-- arguments: `(response)`
+- arguments: `(request, options, response)`
 
 **Example: **
 ```js{}[plugins/http.js]
