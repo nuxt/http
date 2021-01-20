@@ -11,8 +11,9 @@ The `arguments` listed below are those your hook will receive when it's called.
 
 - arguments: `(config)`
 
-**Example: **
-```js{}[plugins/http.js]
+**Example:**
+
+```ts [plugins/http.js]
 export default function ({ $http }) {
   $http.onRequest(config => {
     console.log('Making request to ' + config.url)
@@ -26,8 +27,9 @@ See [here](/advanced#hooks) for advanced usage.
 
 - arguments: `(request, options, response)`
 
-**Example: **
-```js{}[plugins/http.js]
+**Example:**
+
+```ts [plugins/http.js]
 export default function ({ $http }) {
   $http.onResponse((req, options, res) => {
     console.log('Making request to ' + req.url)
@@ -45,8 +47,9 @@ See [here](/advanced#hooks) for advanced usage.
 
 If the error originated from a request.
 
-**Example: **
-```js{}[plugins/http.js]
+**Example:**
+
+```ts [plugins/http.js]
 export default function ({ $http, redirect }) {
   $http.onError((err) => {
     // In case of unauthorized, redirect to a specific page
