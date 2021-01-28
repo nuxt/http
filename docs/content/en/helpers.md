@@ -15,7 +15,7 @@ Helpers available on `$http` instance.
 
 - arguments: `(baseURL)`
 
-Globally set a header to all subsequent requests
+Globally set a base URL to all subsequent requests
 
 ```js
 // Set baseURL (both client and server)
@@ -30,6 +30,15 @@ if (process.client) {
 if (process.server) {
   this.$http.setBaseURL('http://api.example.com')
 }
+```
+
+## `getBaseURL`
+
+Get the value of the base URL
+
+```js
+// Get baseURL value
+this.$http.getBaseURL()
 ```
 
 ## `setHeader`
