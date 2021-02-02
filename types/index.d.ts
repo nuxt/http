@@ -105,6 +105,12 @@ interface NuxtHTTPInstance {
 
 
   /**
+   * Get the baseURL value.
+   * @returns string - the base URL value
+   */
+  getBaseURL(): string
+
+  /**
    * Set the baseURL for all subsequent requests.
    * @param baseURL - the base URL (e.g. `https://myapi.com/`)
    */

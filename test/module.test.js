@@ -80,6 +80,7 @@ describe('module', () => {
     const html = await fetch(url('/instance')).then(r => r.text())
 
     expect(html).toContain('prefixUrl:https://jsonplaceholder.typicode.com/')
+    expect(html).toContain('baseURL:https://jsonplaceholder.typicode.com/')
     expect(html).toContain('testing:oui')
   })
 })
