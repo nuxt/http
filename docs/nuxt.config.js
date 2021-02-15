@@ -1,3 +1,8 @@
 import { withDocus } from 'docus'
 
-export default withDocus({})
+export default withDocus({
+  buildModules: ['vue-plausible'],
+  plausible: {
+    domain: 'http.nuxtjs.org'
+  }
+})

@@ -9,7 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "docus": "^0.0.4",
-    "nuxt": "^2.14.12"
+    "docus": "^0.0.8",
+    "nuxt": "^2.15.0"
+  },
+  "devDependencies": {
+    "vue-plausible": "^1.1.2"
   }
 }
