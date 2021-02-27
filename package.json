@@ -9,7 +9,6 @@
   "types": "types/index.d.ts",
   "files": [
     "lib",
-    "ky-universal",
     "types/*.d.ts"
   ],
   "scripts": {
