@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/nuxt/http/compare/v0.6.2...v0.6.3) (2021-02-27)
+
+
+### Features
+
+* `$http.getBaseURL` ([#165](https://github.com/nuxt/http/issues/165)) ([332bf34](https://github.com/nuxt/http/commit/332bf34fd5bb977f9c2f3077effc40b0c3334d62))
+
+
+### Bug Fixes
+
+* use server plugin for polyfill ([74ad5c3](https://github.com/nuxt/http/commit/74ad5c3e0e21934638f055185ddd1772289dcf71))
+
 ### [0.6.2](https://github.com/nuxt/http/compare/v0.6.1...v0.6.2) (2020-12-23)
 
 
