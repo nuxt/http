@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/nuxt/http/compare/v0.6.3...v0.6.4) (2021-02-27)
+
+
+### Bug Fixes
+
+* fix import of  AbortController and ReadableStream ([460ac85](https://github.com/nuxt/http/commit/460ac85b777c9b3512060b9597af4b650b0fab1e))
+
 ### [0.6.3](https://github.com/nuxt/http/compare/v0.6.2...v0.6.3) (2021-02-27)
 
 
