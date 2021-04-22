@@ -6,6 +6,21 @@ type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 type RequestBody = string | number | boolean | null | object | BodyInit
 
+type HTTPError = ky.HTTPError & {
+	response: HTTPErrorResponse 
+	statusCode?: number
+}
+
+type HTTPErrorResponse = Response & {
+	text: () => Promise<string>
+	json: () => Promise<any>
+	data: any
+}
+
+type OnErrorHook = (
+	error: HTTPError
+) => void;
+
 interface NuxtHTTPInstance {
 	/**
 	 * Fetches the `url` with the option `{method: 'get'}`.
@@ -157,7 +172,7 @@ interface NuxtHTTPInstance {
    *
    * This hook enables you to globally handle request errors.
    */
-  onError(hook: (error: ky.HTTPError) => void): void
+  onError(hook: OnErrorHook): void
 
   /**
    * If you need to create your own ky instance which based on $http defaults, you can use the create(options) method.
