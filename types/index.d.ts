@@ -17,7 +17,7 @@ type HTTPErrorResponse = Response & {
 	data: any
 }
 
-export type OnErrorHook = (
+type OnErrorHook = (
 	error: HTTPError
 ) => void;
 
