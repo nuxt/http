@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import ky, { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook, OnErrorHook } from 'ky'
+import ky, { ResponsePromise, Options, BeforeRequestHook, BeforeRetryHook, AfterResponseHook } from 'ky'
 import './vuex'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
