@@ -157,7 +157,7 @@ interface NuxtHTTPInstance {
    *
    * This hook enables you to globally handle request errors.
    */
-  onError(hook: (error: ky.HTTPError) => void): void
+  onError(hook: (error: ky.HTTPError & { statusCode?: number}) => void): void
 
   /**
    * If you need to create your own ky instance which based on $http defaults, you can use the create(options) method.
