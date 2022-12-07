@@ -14,6 +14,10 @@
 - [✨ &nbsp;Release Notes](https://http.nuxtjs.org/releases)
 - [📖 &nbsp;Documentation](https://http.nuxtjs.org)
 
+## Nuxt 3
+
+HTTP module supports Nuxt 2. Nuxt 3 users can use the new isomorphic [$fetch API](https://nuxt.com/docs/getting-started/data-fetching#isomorphic-fetch-and-fetch) ([migration guide](https://nuxt.com/docs/migration/component-options#isomorphic-fetch)).
+
 ## Features
 
 - The fluent [ky](https://github.com/sindresorhus/ky) API has been extended with enhancements and shortcuts
