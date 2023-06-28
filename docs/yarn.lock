@@ -897,7 +897,7 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@nuxt-themes/docus@^2.0.0-beta.12":
+"@nuxt-themes/docus@^2.0.0-beta.13":
   version "2.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/@nuxt-themes/docus/-/docus-2.0.0-beta.13.tgz#48c4c36e06a55e1b291347c1c6b367a9b119ed09"
   integrity sha512-vPCDj49SrH1AVO9lU+VOyIDN7uMmL7Zkv1nZZcJmQnXnw80lYuVzlNbGp+4w8qpjLERn3OL2UrGs21z6NT3/xg==
