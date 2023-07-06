@@ -20,7 +20,7 @@
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
     "abort-controller": "^3.0.0",
-    "consola": "^2.15.0",
+    "consola": "^3.2.3",
     "defu": "^3.2.2",
     "destr": "^1.0.1",
     "ky": "^0.25.1",
