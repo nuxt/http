@@ -22,7 +22,7 @@
     "abort-controller": "^3.0.0",
     "consola": "^2.15.0",
     "defu": "^3.2.2",
-    "destr": "^1.0.1",
+    "destr": "^2.0.3",
     "ky": "^0.25.1",
     "node-fetch": "^2.6.1",
     "web-streams-polyfill": "^3.0.1"
