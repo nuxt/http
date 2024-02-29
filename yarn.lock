@@ -11484,10 +11484,10 @@ watchpack@^2.0.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-web-streams-polyfill@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.0.1.tgz#1f836eea307e8f4af15758ee473c7af755eb879e"
-  integrity sha512-M+EmTdszMWINywOZaqpZ6VIEDUmNpRaTOuizF0ZKPjSDC8paMRe/jBBwFv0Yeyn5WYnM5pMqMQa82vpaE+IJRw==
+web-streams-polyfill@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-4.0.0.tgz#74cedf168339ee6e709532f76c49313a8c7acdac"
+  integrity sha512-0zJXHRAYEjM2tUfZ2DiSOHAa2aw1tisnnhU3ufD57R8iefL+DcdJyRBRyJpG+NUimDgbTI/lH+gAE1PAvV3Cgw==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
