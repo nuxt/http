@@ -9,8 +9,8 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "@nuxt-themes/docus": "^1.1.3",
-    "nuxt": "^3.0.0"
+    "@nuxt-themes/docus": "^1.15.0",
+    "nuxt": "^3.11.1"
   },
   "devDependencies": {
     "nuxt-plausible": "^0.1.2"
