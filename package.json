@@ -24,7 +24,7 @@
     "defu": "^3.2.2",
     "destr": "^1.0.1",
     "ky": "^0.25.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.3.2",
     "web-streams-polyfill": "^3.0.1"
   },
   "devDependencies": {
