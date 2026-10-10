@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxt/http` was designed for Nuxt 2, which reached end of life on June 30, 2024. In Nuxt 3+, use the built-in [`$fetch`](https://nuxt.com/docs/api/utils/dollarfetch).
+
 [![@nuxt/http](https://http.nuxtjs.org/preview.png)](https://http.nuxtjs.org)
 
 # Nuxt HTTP
